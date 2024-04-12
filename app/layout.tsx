@@ -17,11 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark" // dark 모드
-          // defaultTheme="system"  // light 모드
+          // defaultTheme="dark" // dark 모드
+          defaultTheme="system"  // light 모드
           enableSystem
           disableTransitionOnChange
         >

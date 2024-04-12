@@ -67,10 +67,18 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "bgColorCycle" : { 
+          '0%, 20%' : {backgroundColor : 'rgba(255,218,121,0.6)'},   // 베이지색  
+          '20%, 40%' : {backgroundColor : 'rgba(255,121,158, 0.6)'},   // 살짝 붉은  
+          '40%, 60%' : {backgroundColor : '#eeeeee'}, // 회색
+          '60%, 80%' : {backgroundColor : 'rgba(121,255,218, 0.6)'},   // 에메럴드  
+          '80%, 100%' : {backgroundColor : 'rgba(255,218,121,0.6)'},   // 베이지색  
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bgColor-cycle" : "bgColorCycle 25s infinite"
       },
     },
   },
