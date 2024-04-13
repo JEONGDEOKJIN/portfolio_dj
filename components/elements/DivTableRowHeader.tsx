@@ -1,34 +1,41 @@
 import React from "react";
 
-const DivTableRowHeader = ({
-//   largeCriteria,
-//   mediumCriteria,
-//   smallCriteria,
-//   functionalRequirement,
-//   nonFunctionalRequirement,
-//   desc,
+interface DivTableRowHeaderProps {
+  criteria_1: string;
+  criteria_2: string;
+  criteria_3: string;
+  // criteria_4: string;
+  // criteria_5: string;
+  // criteria_6: string;
+}
+
+const DivTableRowHeader: React.FC<DivTableRowHeaderProps>= ({
+  criteria_1,
+  criteria_2,
+  criteria_3,
+
 }) => {
   return (
     <>
-      <div className="flex text-[14px] text-gray-900 border-t-[1px]  ">
-        {/* <div className="w-[10%]  grow border-b-[1px] border-r-[1px] border-neutral-200 text-center py-3">
-          {largeCriteria}
+      <div className="flex text-[14px] text-gray-900 border-t-[1px] border-neutral-200 ">
+        <div className="w-[10%]  grow  border-r-[1px] border-neutral-200 text-center py-3">
+          {criteria_1}
         </div>
-        <div className="w-[12%]  grow border-b-[1px] border-r-[1px] border-neutral-200 text-center py-3">
-          {mediumCriteria}
-        </div> */}
-        <div className="w-[20%]  grow border-b-[1px] border-r-[1px] border-neutral-200 text-center py-3">
-          {/* {smallCriteria} */}
+        <div className="w-[12%]  grow  border-r-[1px] border-neutral-200 text-center py-3">
+          {criteria_2}
         </div>
-        <div className="w-[20%]  grow border-b-[1px] border-r-[1px] border-neutral-200 text-center py-3">
-          {/* {functionalRequirement} */}
+        <div className="w-[20%]  grow   border-neutral-200 text-center py-3">
+          {criteria_3}
         </div>
         {/* <div className="w-[20%]  grow border-b-[1px] border-r-[1px] border-neutral-200 text-center py-3">
-          {nonFunctionalRequirement}
+          {criteria_4}
         </div> */}
-        <div className="w-[50%]  grow border-b-[1px]  border-neutral-200 text-center py-3">
-          {/* {desc} */}
-        </div>
+        {/* <div className="w-[20%]  grow border-b-[1px] border-r-[1px] border-neutral-200 text-center py-3">
+          {criteria_5}
+        </div> */}
+        {/* <div className="w-[50%]  grow border-b-[1px]  border-neutral-200 text-center py-3">
+          {criteria_6}
+        </div> */}
       </div>
     </>
   );
