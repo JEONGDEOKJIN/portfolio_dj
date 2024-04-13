@@ -85,6 +85,8 @@
   font-style: normal;
 }
 
+
+
 body {
   font-family: "Pretendard-Regular";
 }
@@ -117,4 +119,14 @@ body {
 ::selection {
   background-color: rgba(255, 218, 121, 0.5);
   color: #0d0c22; /* 필요에 따라 색상 조정 */
+}
+
+/* ⭐ 이게 카드 리스트 그리드 컨테이너 ⭐ */
+.cardListGridContainer {
+  display: grid;
+  
+  /* min 값으로 비율(%) 도 가능 */
+  grid-template-columns: repeat(auto-fill, minmax(400px, auto)); 
+  
+  gap: 24px;
 }

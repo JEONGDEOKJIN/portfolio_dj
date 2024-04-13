@@ -30,11 +30,10 @@ const Header = ({children} : any) => {
   } , [])
 
   return (
-    <header  className='relative w-full h-full'> 
+    <header  className='relative w-full h-full items-center '> 
 
-        <section className={ cn('sticky top-0 left-0 z-10 h-[100px] bg-white ', isScrolled ? 'bg-white/10 backdrop-blur-md' : ""  )}>      
+        <section className={ cn('sticky top-0 left-0 z-10 h-[100px]   ', isScrolled ? 'bg-white/70 backdrop-blur-md text-gray-900 shadow-md' : ""  )}>      
           <PagePadding>
-
               <nav className='flex w-[33.333%] cursor-pointer text-[14px] font-[600] '>
                   <NavItem 
                     hrefLink='https://tropical-trouser-a8d.notion.site/5fe2f6f3f2bd448c9d4cee3c59185f35?v=ab8fecd13c0c4d56a98d0bf30b19eadc' 
