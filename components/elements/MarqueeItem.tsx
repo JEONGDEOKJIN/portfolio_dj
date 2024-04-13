@@ -6,7 +6,8 @@ const MarqueeItem = ({desc_1 , desc_2 , stack_1, stack_2, stack_3, cssFilters} :
     <>
           <section className="relative  bg-blue-300 ml-10 w-[273px] h-[340px]  rounded-[24px] " >
             
-            <figure className={`relative ${cssFilters} top-0 h-full  w-full`}>
+            {/* Image 부모에 relative 필수⭐  */}
+            <figure className={`relative ${cssFilters} top-0 h-full  w-full`}> 
               <Image 
                 fill
                 alt="marquee item"
