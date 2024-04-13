@@ -7,7 +7,11 @@ import Image from "next/image";
 import DivTableRowHeader from "./elements/DivTableRowHeader";
 import DivTableRow from "./elements/DivTableRow";
 import DivTableRowMiddle from "./elements/DivTableRowMiddle";
-import DivTableRow_2Row from "./elements/DivTableRow_2row";
+import DivTableRow_2Row from "./elements/DivTableRow_2Row";
+import DivTableRow_3Row from "./elements/DivTableRow_3Row";
+import DivTableRow_4Row from "./elements/DivTableRow_4Row";
+import DivTableRow_5Row from "./elements/DivTableRow_5Row";
+
 
 const FeedDetail = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -161,7 +165,6 @@ const FeedDetail = () => {
           {/* 💪 mx-auto 하면 이제 가운데로 오긴 하는데, flex 를 써서 깔끔하게 오게 하고 싶긴 함  */}
           <main className="w-full bg-[neutral-50] max-w-[1200px] mx-auto rounded-[64px] p-10">
             <article className="w-full ">
-              
               {/* 사진 */}
               <div className=" x-full flex flex-row justify-normal gap-[24px]">
                 {filteredSortedData && filteredSortedData[0].archtectureImg && (
@@ -314,7 +317,7 @@ const FeedDetail = () => {
                       <strong>팀 구성 </strong>
                     </h5>
 
-                    <article className="flex flex-col  border-neutral-200 mt-[15px]">
+                    <article className="flex flex-col  border-neutral-200 w-[500px] h-full mt-[15px]">
                       <DivTableRowHeader
                         criteria_1={"Frontend"}
                         criteria_2={"Backend"}
@@ -333,58 +336,136 @@ const FeedDetail = () => {
                     <h5 className="text-[20px] leading-[1.6em] w-full">
                       <strong>역할</strong>
                     </h5>
-                      <span className="ml-2">
-                        Admin 페이지 제작(Frontend) & 프로젝트 UI/UX 기획
-                      </span>
-
+                    <span className="ml-2">
+                      Admin 페이지 제작(Frontend) & 프로젝트 UI/UX 기획
+                    </span>
                   </div>
 
                   <div className="mt-[16px]">
                     <h5 className="text-[20px] leading-[1.6em]  ">
-                      <strong>
-                        주요기능 및 기술과제
-                      </strong>
+                      <strong>주요 기능</strong>
                     </h5>
-                    
-
-
                     <article className="flex flex-col  border-neutral-200 mt-[15px]">
+                      <figure className="relative w-[870px] h-[450px]">
+                      {/* <figure className="relative w-[450px] h-[450px]/"> */}
+                        <Image
+                          alt="ui"
+                          fill
+                          className="rounded-[24px] object-cover"
+                          src={
+                            "/gif/admin_realestate_subscriptoin_enrollSTOBtn.gif"
+                          }
+                        />
+                      </figure>
+                      
+                      <article className="mt-5">
+                          <DivTableRow_4Row
+                            criteriaDesc_1 = "STO 토큰 발행"
+                            criteriaDesc_2 = "[어드민] 유저가 소유하고 있는 부동산을 DB에 등록하고, 관리자의 승인을 받으면, STO 토큰으로 등록될 수 있음"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_5Row
+                            criteriaDesc_1 = "STO 토큰 청약"
+                            criteriaDesc_2 = "[일반 유저] 부동산 소유주가 등록한 부동산을 n개의 토큰으로 분할하고, 이를 청약하는 기능. 공모일까지 00 개의 청약을 완료하면 100% 청약 달성"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_5Row
+                            criteriaDesc_1 = "STO 토큰 거래"
+                            criteriaDesc_2 = "[일반 유저] 청약 완료 된 후, 사용자 마켓 페이지에서 거래를 진행할 수 있음. 현재 시가, 최근 7일 간의 시세 등을 반영하여 의사결정할 수 있음"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_5Row
+                            criteriaDesc_1 = "투표"
+                            criteriaDesc_2 = "[어드민 및 일반 유저] 해당 토큰을 갖고 있는 유저가 안건을 제시하고, 어드민이 그 중 일부에 대한 안건을 투표로 상정하여, 해당 부동산에 대한 의사결정을 투표를 통해 결정함"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_5Row
+                            criteriaDesc_1 = "어드민 게시판"
+                            criteriaDesc_2 = "[어드민]사용자, 청약, 거래, 게시글에 대한 정보를 조회할 수 있고, 투표 등록, 게시글 등록, 블랙리스트 유저 등록, 매물 등록, 청약 등록 등의 기능"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_5Row
+                            criteriaDesc_1 = "어드민 대시보드"
+                            criteriaDesc_2 = "[어드민] 최근 7일간의 매출, 공모금액, 거래금액, 회원가입수, 블랙리스트 유저, 최근 거래 등에 대한 확인 "
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
                       
 
-                        <p>[Frontend]</p>
-                        <p>
-                          1. 데이터 바인딩 및 인터랙션 UI 구현 : 렌더링은 주로 static site generation을 사용 searchParams 사용하여 모달창 구현 dynamic routes 통해 동적 라우팅 구현
-                        </p>
-
-                        <p>
-                          2. 데이터 시각화 : Chartjs 의 custom tooltip content 활용하여 디자인 커스텀 한 후 시각화
-                        </p>
-                        
-
-                      <DivTableRow_2Row
-                        criteriaDesc_1={"Frontend"}
-                        criteriaDesc_2={"퍼블리싱"}
-                        criteriaDesc_3={"figma 로 제작된 UI를 Tailwind 를 사용하여 컴포넌트 제작"}
-                      />
-                      {/* <DivTableRowMiddle
-                        criteriaDesc_1={"Frontend"}
-                        criteriaDesc_2={"퍼블리싱"}
-                        criteriaDesc_3={"figma 로 제작된 UI를 Tailwind 를 사용하여 컴포넌트 제작"}
-                      /> */}
+                    
                     </article>
 
+                    
                   </div>
 
+                  <div className="mt-[16px]">
+                    <h5 className="text-[20px] leading-[1.6em]  ">
+                      <strong>주요 기술 과제</strong>
+                    </h5>
 
-
+                    <article>
+                          <DivTableRow_2Row
+                            criteriaDesc_1 = "[FE] 데이터 바인딩 및 인터랙션 UI 구현"
+                            criteriaDesc_2 = "렌더링은 주로 static site generation을 사용"
+                            criteriaDesc_3 = "searchPara ms 사용하여 모달창 구현 dynamic routes 통해 동적 라우팅 구현"
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_3Row
+                            criteriaDesc_1 = "[FE] 데이터 시각화"
+                            criteriaDesc_2 = "Chartjs 의 custom tooltip content 활용하여 디자인 커스텀 한 후 시각화"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_3Row
+                            criteriaDesc_1 = "[FE] 퍼블리싱"
+                            criteriaDesc_2 = "figma 로 제작된 UI를 Tailwind 를 사용하여 컴포넌트 제작 grid template 사용하여 레이아웃 제작"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_3Row
+                            criteriaDesc_1 = "[FE] UI 와이어프레임"
+                            criteriaDesc_2 = "협약 기업의 니즈를 반영하여 figma 로 와이어프레임 제작"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                  </div>
 
                   <div className="mt-[16px]">
                     <h5 className="text-[20px] leading-[1.6em]  ">
                       <strong>
-                        협업방식 (✅ 점핏 이력서 목차 및 노션 wiki 에 적은 플젝
-                        소개 목차 에 따름){" "}
+                        협업방식 
                       </strong>
                     </h5>
+                  
+                    <article>
+                          <DivTableRow_4Row
+                            criteriaDesc_1 = "프로젝트 관리"
+                            criteriaDesc_2 = "노션 이슈트래킹, 칸반보드, 간트차트, 스프린트 등의 기능을 적극 활용하여 프로젝트 관리"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+                    <article>
+                          <DivTableRow_5Row
+                            criteriaDesc_1 = "버전 관리"
+                            criteriaDesc_2 = "Release branch, Dev branch 및 페이지별 branch  운영을 통해 체계적인 버전관리"
+                            criteriaDesc_3 = ""
+                          />
+                    </article>
+
+
                   </div>
 
                   <div className="mt-[16px]">

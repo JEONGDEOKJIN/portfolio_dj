@@ -1,17 +1,19 @@
 import React from "react";
 
-interface DivTableRow_2Row {
+interface DivTableRow_3Row {
   criteriaDesc_1: string;
   criteriaDesc_2: string;
   criteriaDesc_3: string;
+  width?: string;
 //   functionalRequirement: any;
 //   desc: string;
 }
 
-const DivTableRow_2Row: React.FC<DivTableRow_2Row> = ({
+const DivTableRow_3Row: React.FC<DivTableRow_3Row> = ({
   criteriaDesc_1,
   criteriaDesc_2,
   criteriaDesc_3,
+  width
 //   functionalRequirement,
 //   desc,
 }) => {
@@ -19,7 +21,7 @@ const DivTableRow_2Row: React.FC<DivTableRow_2Row> = ({
     <>
       {/* {functionalRequirement.map((item: any, index: any) => {
         return ( */}
-          <div className="flex text-[14px] text-gray-800 border-t-[1px] border-neutral-200">
+          <div className="flex text-[14px] text-gray-800  ">
             <div className="flex items-center justify-center w-[300px] shrink-0 border-b-[1px] border-r-[1px] border-neutral-200 p-3">
               {criteriaDesc_1} 
             </div>
@@ -43,4 +45,4 @@ const DivTableRow_2Row: React.FC<DivTableRow_2Row> = ({
   );
 };
 
-export default DivTableRow_2Row;
+export default DivTableRow_3Row;
