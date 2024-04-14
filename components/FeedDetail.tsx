@@ -303,7 +303,10 @@ const FeedDetail = () => {
                   <MainFeature />
                   <TechTask />
                   <Communication />
+                  
                   <Deliverable />
+                  
+                
                 </div>
 
                 {/* 오른쪽 | ✅ padding 용임!*/}
