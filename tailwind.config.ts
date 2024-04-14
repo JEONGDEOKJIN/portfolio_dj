@@ -78,8 +78,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "bgColor-cycle" : "bgColorCycle 20s infinite"
+        "bgColor-cycle" : "bgColorCycle 20s infinite",
+        "bgColor-cycle-fast" : "bgColorCycle 7s infinite ease-in-out",
       },
+      
     },
   },
   plugins: [require("tailwindcss-animate")],

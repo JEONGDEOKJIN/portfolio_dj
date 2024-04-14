@@ -85,7 +85,14 @@
   font-style: normal;
 }
 
+.leftMoveGlobalCSS {
+  left : -150px;
+  width : 350px
+}
 
+.widthServiceDescglabalCSS {
+  width : 500px
+}
 
 body {
   font-family: "Pretendard-Regular";

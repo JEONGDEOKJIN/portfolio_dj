@@ -13,7 +13,7 @@ interface InformationProps {
 const Information: React.FC<InformationProps> = ({projectName , startDatePart , endDatePart , projectGit, projectGhantt}) => {
   return (
     <>
-      <div className="shadow w-[30%] shrink-0 rounded-[32px] bg-white  p-8 flex gap-[12px] h-fit flex-col">
+      <div className="shadow w-[30%] shrink-0 rounded-[32px] bg-white p-8 flex gap-[12px] h-fit flex-col">
         <h5 className="text-[20px] font-normal"> Information </h5>
 
         <div className="flex justify-between">

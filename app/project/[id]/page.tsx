@@ -6,7 +6,7 @@ import React from "react";
 
 const page = async (props: any) => {
   // console.log("props.params.id : " , props.params.id)
-  await sleep(2000); // 5초 동안 기다렸다가 실행해라
+  // await sleep(2000); // 5초 동안 기다렸다가 실행해라
 
   // 클릭시 이렇게 가져올 수 있음
   {

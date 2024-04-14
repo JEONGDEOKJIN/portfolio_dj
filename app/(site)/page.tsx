@@ -5,7 +5,7 @@ import { sleep } from "@/lib/utils";
 
 export default async function Home() {
 
-  await sleep(2000); // 5초 동안 기다렸다가 실행해라
+  // await sleep(2000); // 5초 동안 기다렸다가 실행해라
 
   return (
     <>
