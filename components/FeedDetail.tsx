@@ -16,6 +16,11 @@ import Stacks from "@/contents/Stacks";
 import ProjectName from "@/contents/ProjectName";
 import BadgeIcon from "@/components/elements/BadgeIcon";
 import BadgeIconText from "./elements/BadgeIconText";
+import Footer from "./Footer";
+import Link from "next/link";
+import { redirect } from 'next/navigation'
+import HeaderBanner from "./elements/HeaderBanner";
+
 
 
 const FeedDetail = () => {
@@ -27,10 +32,6 @@ const FeedDetail = () => {
   const [isDemoImageZoomed, setIsDemoImageZoomed] = useState(false);
   const [isDemoImageHover, setIsDemoImageHover] = useState(false);
 
-  const handleCloseBtn = () => {
-    document.body.style.overflowY = "auto"; // 디테일 페이지에서 클릭했을 때에도, 스크롤 생기게 하기
-    setIsItemDetailOpened(false);
-  };
 
   interface filteredSortedData {
     id: number;
@@ -159,11 +160,9 @@ const FeedDetail = () => {
   return (
     <>
       <section>
-        <article className="fixed inset-0 z-50 flex items-center justify-end w-full h-10 bg-black/80 mix-blend-normal">
-          <button className="mb-1 mr-2" onClick={handleCloseBtn}>
-            <IconCancelItemDetail />
-          </button>
-        </article>
+
+        <HeaderBanner  />
+      
 
         <div className="fixed inset-0 z-50 flex flex-col w-full h-full overflow-y-auto transition-opacity duration-300 ease-in-out bg-white inset-y-9">
           {<HeaderProfile title={filteredSortedData[0].projectName} />}
@@ -171,8 +170,8 @@ const FeedDetail = () => {
           {/* 💪 mx-auto 하면 이제 가운데로 오긴 하는데, flex 를 써서 깔끔하게 오게 하고 싶긴 함  */}
           <main className="w-full bg-[neutral-50] max-w-[1200px] mx-auto rounded-[64px] p-10">
             <section className="w-full ">
-              {/* 사진 */}
 
+              {/* 사진 */}
               <article className=" x-full flex flex-row justify-normal gap-[24px]">
                 {filteredSortedData && filteredSortedData[0].archtectureImg && (
                   <figure
@@ -300,17 +299,20 @@ const FeedDetail = () => {
 
                   <InformationRight />
 
-
               </article>
-
 
             </section>
 
             <ProfileSection />
 
+            <div className="h-[120px]"> </div>
+
+
           </main>
         </div>
+      
       </section>
+
     </>
   );
 };

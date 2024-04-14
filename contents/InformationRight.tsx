@@ -1,6 +1,15 @@
+"use client"
+
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const InformationRight = () => {
+  const router = useRouter();
+
+  const handleSendFeedback = () => {
+    router.push("/");
+  }
+
   return (
     <>
     <div className="w-[500px] relative">
@@ -55,10 +64,10 @@ const InformationRight = () => {
         </div>
 
         <button
-          //   onClick={handleSendFeedback}
+            onClick={handleSendFeedback}
           className="px-4 py-3 w-full mx-auto ml-auto text-sm font-semibold rounded-full cursor-pointer mt-[16px] bg-gray-950 text-gray-50 hover:bg-gray-600 "
         >
-          Feedback Now
+          More projects
         </button>
       </div>
       </div>

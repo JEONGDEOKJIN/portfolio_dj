@@ -8,9 +8,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       <div className="bg-white text-gray-950 w-full h-full">
         <Header>
           {children}
-        
           <Footer />
-        
         </Header>
         
       </div>

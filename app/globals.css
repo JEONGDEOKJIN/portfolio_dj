@@ -102,6 +102,10 @@
   width : 500px
 }
 
+.marginTopGlobalCSS {
+  margin-top : 12px
+}
+
 .colorIconDescglabalCSS {
   background-color : rgb(43, 89, 63)
 }
