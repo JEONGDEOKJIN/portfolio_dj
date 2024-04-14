@@ -11,6 +11,7 @@ import DivTableRow_2Row from "./elements/DivTableRow_2Row";
 import DivTableRow_3Row from "./elements/DivTableRow_3Row";
 import DivTableRow_4Row from "./elements/DivTableRow_4Row";
 import DivTableRow_5Row from "./elements/DivTableRow_5Row";
+import Information from "@/contents/Information";
 
 
 const FeedDetail = () => {
@@ -71,8 +72,8 @@ const FeedDetail = () => {
       category: "feature",
       fsd_smallcategory: "small category",
       fsd_mediumcategory: "project",
-      startDate: "2024-01-01",
-      endDate: "2024-02-01",
+      startDate: "24.01.01",
+      endDate: "24.02.01",
     },
     {
       id: 2,
@@ -166,6 +167,7 @@ const FeedDetail = () => {
           <main className="w-full bg-[neutral-50] max-w-[1200px] mx-auto rounded-[64px] p-10">
             <article className="w-full ">
               {/* 사진 */}
+              
               <div className=" x-full flex flex-row justify-normal gap-[24px]">
                 {filteredSortedData && filteredSortedData[0].archtectureImg && (
                   <figure
@@ -475,88 +477,76 @@ const FeedDetail = () => {
                         해보자){" "}
                       </strong>
                     </h5>
+                    
+                  <section className="flex flex-row gap-5">
+
+                    <article className="relative w-[120px] h-[120px]">
+                      <div className="relative  rounded-[24px] shadow-md w-full h-full ">
+                        <Image 
+                          alt="project git"
+                          fill
+                          className="rounded-[24px] object-cover"
+                          src="/img/ERD_example.png" 
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-neutral-800 opacity-10 w-full h-full rounded-[24px]"></div>
+                      <div className="absolute left-1 bottom-1 bg-[#82f0a3]  text-white rounded-full text-[13px] font-[500] w-[36px] h-[36px] shrink-0 flex items-center justify-center">ERD</div>
+                    </article>
+
+                    <article className="relative w-[120px] h-[120px]">
+                      <div className="relative  rounded-[24px] shadow-md w-full h-full ">
+                        <Image 
+                          alt="project git"
+                          fill
+                          className="rounded-[24px] object-cover"
+                          src="/img/API_example.png" 
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-neutral-800 opacity-10 w-full h-full rounded-[24px]"></div>
+                      <div className="absolute left-1 bottom-1 bg-[#6c6028]  text-white rounded-full text-[13px] font-[500] w-[36px] h-[36px] shrink-0 flex items-center justify-center">API</div>
+                    </article>
+
+                    <article className="relative w-[120px] h-[120px]">
+                      <div className="relative  rounded-[24px] shadow-md w-full h-full ">
+                        <Image 
+                          alt="project git"
+                          fill
+                          className="rounded-[24px] object-cover"
+                          src="/img/archi_example.webp" 
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-neutral-800 opacity-10 w-full h-full rounded-[24px]"></div>
+                      <div className="absolute left-1 bottom-1 bg-[#286c28]  text-white rounded-full text-[13px] font-[600] p-2 shrink-0 flex items-center justify-center">아키텍처</div>
+                    </article>
+                  
+                          {/* ui/ux 넣고 - 사진 까지 넣고 하면 됨  */}
+                    <article className="relative w-[120px] h-[120px]">
+                      <div className="relative  rounded-[24px] shadow-md w-full h-full ">
+                        <Image 
+                          alt="project git"
+                          fill
+                          className="rounded-[24px] object-cover"
+                          src="/img/archi_example.webp" 
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-neutral-800 opacity-10 w-full h-full rounded-[24px]"></div>
+                      <div className="absolute left-1 bottom-1 bg-[#28466c]  text-white rounded-full text-[13px] font-[600] p-2 shrink-0 flex items-center justify-center">아키텍처</div>
+                    </article>
+                  </section>
+
                   </div>
                 </div>
 
                 {/* 오른쪽 */}
-                <div className="shadow w-[30%] shrink-0 rounded-[32px] bg-white  p-8 flex gap-[12px] h-fit flex-col">
-                  <h5 className="text-[20px] font-normal"> Information </h5>
+                
+                <Information
+                  projectName = {filteredSortedData[0].projectName}
+                  startDatePart = {filteredSortedData[0].startDate}
+                  endDatePart = {filteredSortedData[0].endDate}
+                  projectGit = {filteredSortedData[0].repository}
+                  projectGhantt = {filteredSortedData[0].projectDocuments}
+                />
 
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 text-[14px]">Project</span>
-                    <span className="text-[14px]">
-                      {/* {projectNames[filteredSortedData[0].projectName]} */}
-                    </span>
-                  </div>
-
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 text-[14px]">Date</span>
-                    <span className="text-[14px]">
-                      {(() => {
-                        const startDatePart = filteredSortedData[0].startDate
-                          .split("T")[0]
-                          .split("-");
-                        const endDatePart = filteredSortedData[0].endDate
-                          .split("T")[0]
-                          .split("-");
-                        return `${startDatePart[0].slice(2, 4)}.${
-                          startDatePart[1]
-                        }.${startDatePart[2]}-${startDatePart[0].slice(2, 4)}.${
-                          endDatePart[1]
-                        }.${endDatePart[2]}`;
-                      })()}
-                    </span>
-                  </div>
-
-                  <div className="flex justify-between">
-                    <a
-                      className="text-[14px]  "
-                      href={filteredSortedData[0].repository}
-                    >
-                      <span className="text-gray-600 text-[14px]">
-                        프로젝트 깃 주소
-                      </span>
-                      <span className="text-[14px] flex  ">
-                        {filteredSortedData[0].repository}
-                      </span>
-                    </a>
-                  </div>
-
-                  <div className="flex justify-between">
-                    <a
-                      className="text-[14px] "
-                      href={filteredSortedData[0].projectDocuments}
-                    >
-                      <span className="text-gray-600 text-[14px]">
-                        프로젝트 일지
-                      </span>
-                      <span className="text-[14px] flex ">
-                        {filteredSortedData[0].projectDocuments}
-                      </span>
-                    </a>
-                  </div>
-
-                  <div className="flex justify-between">
-                    <a
-                      className="text-[14px] "
-                      href="https://deokjin.gitbook.io/dj/"
-                    >
-                      <span className="text-gray-600 text-[14px]">
-                        개발 공부 블로그
-                      </span>
-                      <span className="text-[14px] flex ">
-                        https://deokjin.gitbook.io/dj
-                      </span>
-                    </a>
-                  </div>
-
-                  <button
-                    // onClick={handleSendFeedback}
-                    className="px-4 py-3 w-full mx-auto ml-auto text-sm font-semibold rounded-full cursor-pointer mt-[16px] bg-gray-950 text-gray-50 hover:bg-gray-600 "
-                  >
-                    Feedback Now
-                  </button>
-                </div>
               </div>
             </article>
 
