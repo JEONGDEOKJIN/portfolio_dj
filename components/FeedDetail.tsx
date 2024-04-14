@@ -4,15 +4,7 @@ import HeaderProfile from "./HeaderProfile";
 import IconCancelZoomImage from "./elements/IconCancelZoomImage";
 import ProfileSection from "./ProfileSection";
 import Image from "next/image";
-import DivTableRowHeader from "./elements/DivTableRowHeader";
-import DivTableRow from "./elements/DivTableRow";
-import DivTableRowMiddle from "./elements/DivTableRowMiddle";
-import DivTableRow_2Row from "./elements/DivTableRow_2Row";
-import DivTableRow_3Row from "./elements/DivTableRow_3Row";
-import DivTableRow_4Row from "./elements/DivTableRow_4Row";
-import DivTableRow_5Row from "./elements/DivTableRow_5Row";
-import Information from "@/contents/Information";
-import Information_ver2 from "@/contents/Information_ver2";
+import InformationRight from "@/contents/InformationRight";
 import MainFeature from "@/contents/MainFeature";
 import Deliverable from "@/contents/Deliverable";
 import Communication from "@/contents/Communication";
@@ -24,7 +16,6 @@ import Stacks from "@/contents/Stacks";
 import ProjectName from "@/contents/ProjectName";
 import BadgeIcon from "@/components/elements/BadgeIcon";
 import BadgeIconText from "./elements/BadgeIconText";
-import dummyProjectList  from "@/lib/DummyDataDJ";
 
 
 const FeedDetail = () => {
@@ -283,17 +274,18 @@ const FeedDetail = () => {
               <article className="relative shadow flex flex-row  gap-[24px] px-10 rounded-[64px] mt-[24px] py-10 bg-[#f9f9f9] h-full  ">
                 
                 {/* 왼쪽 */}
-                <div className="relative flex flex-col flex-wrap gap-[20px] h-full w-[80%]">
+                <div className="relative flex flex-col flex-wrap gap-[56px] h-full w-[80%]">
 
-                  <article className="flex ">
+                  {/* <article className="flex ">
                     <BadgeIcon desc={filteredSortedData[0].endDate} />
                     <BadgeIconText desc={"project"} />
-                  </article>
+                  </article> */}
                   
                   <ProjectName
+                      stacks = {filteredSortedData[0].stacks}
                       projectName={filteredSortedData[0].projectName}
                   />
-                  <Stacks stacks={filteredSortedData[0].stacks} />
+                  {/* <Stacks stacks={filteredSortedData[0].stacks} /> */}
                   
                   <ServiceDesc
                     serviceDesc={filteredSortedData[0].serviceDesc}
@@ -303,22 +295,12 @@ const FeedDetail = () => {
                   <MainFeature />
                   <TechTask />
                   <Communication />
-                  
                   <Deliverable />
-                  
-                
                 </div>
 
-                {/* 오른쪽 | ✅ padding 용임!*/}
-                  <Information_ver2 />
+                  <InformationRight />
 
-                {/* <Information
-                  projectName={filteredSortedData[0].projectName}
-                  startDatePart={filteredSortedData[0].startDate}
-                  endDatePart={filteredSortedData[0].endDate}
-                  projectGit={filteredSortedData[0].repository}
-                  projectGhantt={filteredSortedData[0].projectDocuments}
-                /> */}
+
               </article>
 
 

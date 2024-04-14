@@ -86,12 +86,24 @@
 }
 
 .leftMoveGlobalCSS {
-  left : -150px;
+  left : -160px;
   width : 350px
+}
+
+.leftMoveIconGlobalCSS {
+  margin-left : -8px;
+}
+
+.marginTopGlobalCSS {
+  margin-top : 15px
 }
 
 .widthServiceDescglabalCSS {
   width : 500px
+}
+
+.colorIconDescglabalCSS {
+  background-color : rgb(43, 89, 63)
 }
 
 body {

@@ -12,9 +12,7 @@ const Deliverable = () => {
           </strong>
         </h5>
 
-        <section className="flex flex-row gap-5 w-full ">
-
-
+        <section className="flex flex-row gap-5 w-full marginTopGlobalCSS">
           <IconSmallRoundedRect 
             linkHref={"https://dbdiagram.io/d/6541ab467d8bbd64653cf50b"} 
             imgSrc = {"/img/ERD_example.png"}
@@ -51,6 +49,9 @@ const Deliverable = () => {
             />
 
         </section>
+
+        <section className="p-10"/> 
+
       </div>
     </>
   );

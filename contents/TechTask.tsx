@@ -10,6 +10,7 @@ const TechTask = () => {
           <strong>주요 기술 과제</strong>
         </h5>
 
+      <div className="marginTopGlobalCSS">
         <article>
           <DivTableRow_2Row
             criteriaDesc_1="[FE] 데이터 바인딩 및 인터랙션 UI 구현"
@@ -38,6 +39,7 @@ const TechTask = () => {
             criteriaDesc_3=""
           />
         </article>
+        </div>
       </div>
     </>
   );

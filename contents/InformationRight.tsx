@@ -1,6 +1,6 @@
 import React from "react";
 
-const Information_ver2 = () => {
+const InformationRight = () => {
   return (
     <>
     <div className="w-[500px] relative">
@@ -67,4 +67,4 @@ const Information_ver2 = () => {
   );
 };
 
-export default Information_ver2;
+export default InformationRight;
