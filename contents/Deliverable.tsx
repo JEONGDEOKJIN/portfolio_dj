@@ -24,7 +24,7 @@ const Deliverable = () => {
             />
 
           <IconSmallRoundedRect 
-            linkHref={`${projectSTO[0].deliverabes.ERD.linkHref}`} 
+            linkHref={`${projectSTO[0].deliverabes.architecture.linkHref}`} 
             imgSrc = {"/img/archi_example.webp"}
             desc = {"아키텍처"}
             circleColor = {"#28466c"}
@@ -48,6 +48,13 @@ const Deliverable = () => {
             linkHref={`${projectSTO[0].deliverabes.description.linkHref}`} 
             imgSrc = {"/img/requirement_example.JPG"}
             desc = {"요구사항 정의"}
+            circleColor = {"#28466c"}
+            />
+
+          <IconSmallRoundedRect 
+            linkHref={`${projectSTO[0].deliverabes.userFlow.linkHref}`} 
+            imgSrc = {"/img/useflow_example.png"}
+            desc = {"UserFlow"}
             circleColor = {"#28466c"}
             />
 
