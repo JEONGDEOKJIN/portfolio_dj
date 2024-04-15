@@ -2,7 +2,10 @@ import DivTableRow from "@/components/elements/DivTableRow";
 import DivTableRowHeader from "@/components/elements/DivTableRowHeader";
 import React from "react";
 
-const Team = () => {
+const Team = ({ teamData }: any) => {
+
+  console.log("teamData" , teamData)
+
   return (
     <>
       <div className="mt-[16px] widthServiceDescglabalCSS h-full">
@@ -18,9 +21,9 @@ const Team = () => {
           />
 
           <DivTableRow
-            criteriaDesc_1={"2명"}
-            criteriaDesc_2={"3명"}
-            criteriaDesc_3={"컨트랙트 : 전원 개발"}
+            criteriaDesc_1={teamData.frontend}
+            criteriaDesc_2={teamData.backend}
+            criteriaDesc_3={teamData.etc}
           />
         </article>
       </div>

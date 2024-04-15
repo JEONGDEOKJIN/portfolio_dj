@@ -147,8 +147,8 @@ const FeedDetail = () => {
                   />
 
                   <ServiceDesc serviceDesc={projectSTO[0].serviceDesc} />
-                  <Team />
-                  <Role />
+                  <Team  teamData = {projectSTO[0].team} />
+                  <Role myRole = {projectSTO[0].myRole} />
                   <MainFeature />
                   <TechTask />
                   <Communication />
