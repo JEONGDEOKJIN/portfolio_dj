@@ -95,12 +95,17 @@
   height  : 60px
 }
 
+.mainfeatureMargin {
+  margin-left : 50px;
+  /* margin-right : auto;/ */
+}
+
 .leftMoveIconGlobalCSS {
   margin-left : -8px;
 }
 
 .marginTopGlobalCSS {
-  margin-top : 15px
+  margin-top : 5px
 }
 
 .widthServiceDescglabalCSS {

@@ -2,6 +2,14 @@ import DivTableRow_4Row from "@/components/elements/DivTableRow_4Row";
 import DivTableRow_5Row from "@/components/elements/DivTableRow_5Row";
 import Image from "next/image";
 import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { dummyProjectSTO } from "@/lib/DummyDataDJ";
 
 const MainFeature = () => {
@@ -14,16 +22,35 @@ const MainFeature = () => {
           <strong>주요 기능</strong>
         </h5>
 
-        <article className="flex flex-col  border-neutral-200 mt-[15px]">
-          <figure className="relative w-[870px] h-[450px]">
-            {/* <figure className="relative w-[450px] h-[450px]/"> */}
-            <Image
-              alt="ui"
-              fill
-              className="rounded-[24px] object-cover"
-              src={"/gif/admin_realestate_subscriptoin_enrollSTOBtn.gif"}
-            />
-          </figure>
+        <article className="flex flex-col border-neutral-200   ">
+          {/* <figure className="relative w-[870px] h-[450px]"> */}
+            <article className="relative  text-white w-full h-full mainfeatureMargin flex items-center justify-center">
+              <Carousel className="w-full max-w-[80%]  ">
+                <CarouselContent>
+                  {projectSTO[0].architectureImageHref.map((item, index) => (
+                    <CarouselItem key={index}>
+                      <div className="">
+                        <Card className="bg-transparent border-none">
+                          <CardContent className="flex aspect-video  items-center justify-center">
+                            <figure className="relative w-full rounded-[40px] max-w-[80%] max-h-[90%] h-full z-50 bg-no-repeat bg-cover bg-center shadow cursor-pointer">
+                              <Image
+                                fill
+                                alt="architecture image"
+                                className="rounded-[40px] object-cover w-full h-full"
+                                src={`${item.href}`}
+                              />
+                            </figure>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </article>
+          {/* </figure> */}
 
           <div className=" marginTopGlobalCSS">
             <article className="mt-5">

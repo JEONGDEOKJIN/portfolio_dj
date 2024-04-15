@@ -2,7 +2,6 @@ import React from "react";
 import { dummyProjectSTO } from "@/lib/DummyDataDJ";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-
 import {
   Carousel,
   CarouselContent,
@@ -17,7 +16,7 @@ const CarouselArchitecture = () => {
   // console.log("projectName", ProjectSTO[0].architectureImageHref); // 🔵 정상적으로 나옴, 첫번째 배열이 그대로 잘 나오기
 
   return (
-    <div className="text-[100px] z-20 text-white w-full h-full  flex items-center justify-center">
+    <article className="text-[100px] z-20 text-white w-full h-full  flex items-center justify-center">
       <Carousel className="w-full max-w-[70%]  ">
         <CarouselContent>
           {ProjectSTO[0].architectureImageHref.map((item, index) => (
@@ -42,7 +41,7 @@ const CarouselArchitecture = () => {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-    </div>
+    </article>
   );
 };
 
