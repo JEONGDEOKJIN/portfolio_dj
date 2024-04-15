@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+import { dummyProjectSTO } from "@/lib/DummyDataDJ";
 
 const InformationRight = () => {
   const router = useRouter();
@@ -9,6 +10,8 @@ const InformationRight = () => {
   const handleSendFeedback = () => {
     router.push("/");
   }
+
+  const [...projectSTO] = dummyProjectSTO
 
   return (
     <>
@@ -19,46 +22,55 @@ const InformationRight = () => {
         <div className="flex justify-between">
           <span className="text-gray-600 text-[14px]">Project</span>
           <span className="text-[14px]">
-            {/* {projectNames[clickedDetailedItem.projectID]} */}
+            {projectSTO[0].informationSection.projectName}
           </span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-gray-600 text-[14px]">Date</span>
           <span className="text-[14px]">
-            {/* {startDatePart} - {endDatePart} */}
+            {projectSTO[0].informationSection.startDate} - {projectSTO[0].informationSection.endDate}
           </span>
         </div>
 
         <div className="flex justify-between">
           <a
-            className="text-[14px]  "
-            // href={clickedDetailedItem.repository}
+            className="text-[14px]"
+            href={projectSTO[0].informationSection.projectRepository}
           >
             <span className="text-gray-600 text-[14px]">프로젝트 깃 주소</span>
             <span className="text-[14px] flex  ">
-              {/* {clickedDetailedItem.repository} */}
+              {projectSTO[0].informationSection.projectRepository.split('projects')[0]}
             </span>
           </a>
         </div>
 
         <div className="flex justify-between">
           <a
-            className="text-[14px] "
-            // href={clickedDetailedItem.projectDocuments}
+            className="text-[14px]"
+            href={projectSTO[0].informationSection.projectDocuments}
           >
-            <span className="text-gray-600 text-[14px]">프로젝트 일지</span>
+            <span className="text-gray-600 text-[14px]">프로젝트 관리</span>
             <span className="text-[14px] flex ">
-              {/* {clickedDetailedItem.projectDocuments} */}
+              {`notion.site/${projectSTO[0].informationSection.projectName}`}
             </span>
           </a>
         </div>
 
         <div className="flex justify-between">
-          <a className="text-[14px] " href="https://deokjin.gitbook.io/dj/">
-            <span className="text-gray-600 text-[14px]">개발 공부 블로그</span>
+          <a className="text-[14px] " href={projectSTO[0].informationSection.DEVBlog}>
+            <span className="text-gray-600 text-[14px]"> 딥다이브 블로그</span>
             <span className="text-[14px] flex ">
-              https://deokjin.gitbook.io/dj
+              {projectSTO[0].informationSection.DEVBlog}
+            </span>
+          </a>
+        </div>
+
+        <div className="flex justify-between">
+          <a className="text-[14px] " href={projectSTO[0].informationSection.justStudyBlog}>
+            <span className="text-gray-600 text-[14px]"> 공부기록 블로그</span>
+            <span className="text-[14px] flex ">
+              {projectSTO[0].informationSection.justStudyBlog}
             </span>
           </a>
         </div>

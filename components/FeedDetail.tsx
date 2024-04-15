@@ -60,7 +60,8 @@ const FeedDetail = () => {
                     <Image
                       fill
                       alt="architecture image"
-                      className="rounded-[40px] object-cover"
+                      className="rounded-[40px] "
+                      objectFit="contain"
                       src={`${projectSTO[0].architectureImageThumbnail}`}
                     />
 

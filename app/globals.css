@@ -85,6 +85,12 @@
   font-style: normal;
 }
 
+.mainfeatureDesc {
+  background-color : rgba(50,50,50, 0.85);
+  
+  bottom : -10px
+}
+
 .leftMoveGlobalCSS {
   left : -170px;
   width : 350px
