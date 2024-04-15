@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import IconCancelItemDetail from "@/components/ui/IconCancelItemDetail";
 import HeaderProfile from "./HeaderProfile";
 import IconCancelZoomImage from "./elements/IconCancelZoomImage";
 import ProfileSection from "./ProfileSection";
@@ -12,16 +11,10 @@ import TechTask from "@/contents/TechTask";
 import Team from "@/contents/Team";
 import Role from "@/contents/Role";
 import ServiceDesc from "@/contents/ServiceDesc";
-import Stacks from "@/contents/Stacks";
 import ProjectName from "@/contents/ProjectName";
-import BadgeIcon from "@/components/elements/BadgeIcon";
-import BadgeIconText from "./elements/BadgeIconText";
-import Footer from "./Footer";
-import Link from "next/link";
-import { redirect } from 'next/navigation'
 import HeaderBanner from "./elements/HeaderBanner";
-
-
+import CarouselArchitecture from "./CarouselArchitecture";
+import { dummyProjectSTO } from "@/lib/DummyDataDJ";
 
 const FeedDetail = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -32,25 +25,9 @@ const FeedDetail = () => {
   const [isDemoImageZoomed, setIsDemoImageZoomed] = useState(false);
   const [isDemoImageHover, setIsDemoImageHover] = useState(false);
 
+  const [...projectSTO] = dummyProjectSTO;
+  console.log("projectName@projectSTO", projectSTO[0].projectName); // 🔵 정상적으로 나옴, 첫번째 배열이 그대로 잘 나오기
 
-  interface filteredSortedData {
-    id: number;
-    image: string;
-    title: string;
-    stacks: string[];
-    serviceDesc: string;
-    demoVideo_2: string;
-    category: string;
-    fsd_smallcategory: string;
-    projectName: string;
-    fsd_mediumcategory: string;
-    repository: string;
-    projectDocuments: string;
-    startDate: string;
-    endDate: string;
-    demoGIF: string;
-    archtectureImg: string;
-  }
 
   const handleArchitectureImage = () => {
     setIsArchitectureImageZoomed(!isArchitectureImageZoomed);
@@ -60,120 +37,20 @@ const FeedDetail = () => {
     setIsDemoImageZoomed(!isDemoImageZoomed);
   };
 
-  const filteredSortedData: filteredSortedData[] = [
-    {
-      id: 1,
-      projectName: "STO project",
-      stacks: ["Next.js", "Typescript", "Tailwind"],
-      serviceDesc:
-        "누구나 쉽게 부동산을 소유할 수 있는 부동산 조각투자 서비스로써, 부동산 자산을 불록체인 토큰화 하여 분양 받고, 매매 할 수 있는 STO 거래 플랫폼",
-      demoGIF: "admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      archtectureImg: "memaidToExcali",
-      image: "image1.jpg",
-      title: "gooe",
-      repository: "www",
-      projectDocuments: "www",
-      demoVideo_2: "video1.mp4",
-      category: "feature",
-      fsd_smallcategory: "small category",
-      fsd_mediumcategory: "project",
-      startDate: "24.01.01",
-      endDate: "24.02.01",
-    },
-    {
-      id: 2,
-      projectName: "STO project",
-      stacks: ["Node.js", "React.js"],
-      serviceDesc: " ",
-      demoGIF: "admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      archtectureImg: "memaidToExcali",
-      image: "image2.jpg",
-      title: "gooe",
-      repository: "www",
-      projectDocuments: "www",
-      demoVideo_2: "video2.mp4",
-      category: "feature",
-      fsd_smallcategory: "small category",
-      fsd_mediumcategory: "project",
-      startDate: "2024-01-01",
-      endDate: "2024-02-01",
-    },
-    {
-      id: 3,
-      projectName: "STO project",
-      stacks: ["Node.js", "React.js"],
-      serviceDesc: " ",
-      demoGIF: "admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      archtectureImg: "memaidToExcali",
-      image: "image2.jpg",
-      title: "gooe",
-      repository: "www",
-      projectDocuments: "www",
-      demoVideo_2: "video2.mp4",
-      category: "feature",
-      fsd_smallcategory: "small category",
-      fsd_mediumcategory: "project",
-      startDate: "2024-01-01",
-      endDate: "2024-02-01",
-    },
-    {
-      id: 4,
-      projectName: "STO project",
-      stacks: ["Node.js", "React.js"],
-      serviceDesc: " ",
-      demoGIF: "admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      archtectureImg: "memaidToExcali",
-      image: "image2.jpg",
-      title: "gooe",
-      repository: "www",
-      projectDocuments: "www",
-      demoVideo_2: "video2.mp4",
-      category: "feature",
-      fsd_smallcategory: "small category",
-      fsd_mediumcategory: "project",
-      startDate: "startDate",
-      endDate: "endDate",
-    },
-    {
-      id: 5,
-      projectName: "STO project",
-      stacks: ["Node.js", "React.js"],
-      serviceDesc: " ",
-      demoGIF: "admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      archtectureImg: "memaidToExcali",
-      image: "image2.jpg",
-      title: "gooe",
-      repository: "www",
-      projectDocuments: "www",
-      demoVideo_2: "video2.mp4",
-      category: "feature",
-      fsd_smallcategory: "small category",
-      fsd_mediumcategory: "project",
-      startDate: "startDate",
-      endDate: "endDate",
-    },
-    // { id: 6, image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
-    // { id: 7, image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
-  ];
-
-
   return (
     <>
       <section>
-
-        <HeaderBanner  />
-      
+        <HeaderBanner />
 
         <div className="fixed inset-0 z-50 flex flex-col w-full h-full overflow-y-auto transition-opacity duration-300 ease-in-out bg-white inset-y-9">
-          {<HeaderProfile title={filteredSortedData[0].projectName} />}
+          {<HeaderProfile title={projectSTO[0].projectName} />}
 
           {/* 💪 mx-auto 하면 이제 가운데로 오긴 하는데, flex 를 써서 깔끔하게 오게 하고 싶긴 함  */}
           <main className="w-full bg-[neutral-50] max-w-[1200px] mx-auto rounded-[64px] p-10">
             <section className="w-full ">
-
               {/* 사진 */}
               <article className=" x-full flex flex-row justify-normal gap-[24px]">
-                {filteredSortedData && filteredSortedData[0].archtectureImg && (
+                {projectSTO && projectSTO[0].architectureImageHref && (
                   <figure
                     onClick={() => handleArchitectureImage()}
                     onMouseEnter={() => setIsArchitectureImageHover(true)}
@@ -183,8 +60,8 @@ const FeedDetail = () => {
                     <Image
                       fill
                       alt="architecture image"
-                      className="rounded-[40px]"
-                      src={`/img/memaidToExcali.png`}
+                      className="rounded-[40px] object-cover"
+                      src={`${projectSTO[0].architectureImageThumbnail}`}
                     />
 
                     {isArchitectureImageHover && (
@@ -206,25 +83,12 @@ const FeedDetail = () => {
                       <IconCancelZoomImage />
                     </div>
 
-                    <figure
-                      // style={{
-                      //   backgroundImage: `url(http://localhost:7070/getImg/${filteredSortedData[0].image})`,
-                      // }}
-                      // onClick={() => handleDemoImage()}
+                    <CarouselArchitecture />
 
-                      className="relative w-full  max-w-[90%] max-h-[90%] h-full z-50 bg-no-repeat bg-cover bg-center shadow cursor-pointer"
-                    >
-                      <Image
-                        fill
-                        alt="architecture image"
-                        className="rounded-[40px] object-none w-full h-full"
-                        src={`/img/memaidToExcali.png`}
-                      />
-                    </figure>
                   </div>
                 )}
 
-                {filteredSortedData && filteredSortedData[0].image && (
+                {projectSTO && projectSTO[0].image && (
                   <figure
                     onClick={() => handleDemoImage()}
                     onMouseEnter={() => setIsDemoImageHover(true)}
@@ -269,26 +133,20 @@ const FeedDetail = () => {
                 )}
               </article>
 
-
               <article className="relative shadow flex flex-row  gap-[24px] px-10 rounded-[64px] mt-[24px] py-10 bg-[#f9f9f9] h-full  ">
-                
                 {/* 왼쪽 */}
                 <div className="relative flex flex-col flex-wrap gap-[56px] h-full w-[80%]">
-
                   {/* <article className="flex ">
-                    <BadgeIcon desc={filteredSortedData[0].endDate} />
+                    <BadgeIcon desc={projectSTO[0].endDate} />
                     <BadgeIconText desc={"project"} />
                   </article> */}
-                  
+
                   <ProjectName
-                      stacks = {filteredSortedData[0].stacks}
-                      projectName={filteredSortedData[0].projectName}
+                    stacks={projectSTO[0].stacks}
+                    projectName={projectSTO[0].projectName}
                   />
-                  {/* <Stacks stacks={filteredSortedData[0].stacks} /> */}
-                  
-                  <ServiceDesc
-                    serviceDesc={filteredSortedData[0].serviceDesc}
-                  />
+
+                  <ServiceDesc serviceDesc={projectSTO[0].serviceDesc} />
                   <Team />
                   <Role />
                   <MainFeature />
@@ -297,22 +155,16 @@ const FeedDetail = () => {
                   <Deliverable />
                 </div>
 
-                  <InformationRight />
-
+                <InformationRight />
               </article>
-
             </section>
 
             <ProfileSection />
 
             <div className="h-[120px]"> </div>
-
-
           </main>
         </div>
-      
       </section>
-
     </>
   );
 };

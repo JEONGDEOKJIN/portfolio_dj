@@ -14,7 +14,6 @@ const Header = ({children} : any) => {
   // const headerRef = useRef<HTMLDivElement>(null)
 
   const handleScroll = () => {
-    console.log('scrolling 이벤트발생 ✅✅✅ ');
 
     const srcollValue = window.scrollY;
     setIsScrolled(srcollValue > 0)

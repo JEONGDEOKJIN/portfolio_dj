@@ -86,8 +86,13 @@
 }
 
 .leftMoveGlobalCSS {
-  left : -160px;
+  left : -170px;
   width : 350px
+}
+
+.widthStackGlobalCSS {
+  width : 70%;
+  height  : 60px
 }
 
 .leftMoveIconGlobalCSS {

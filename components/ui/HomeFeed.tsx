@@ -4,10 +4,12 @@ import React from 'react'
 import SVGExternalLink from '../elements/SVGExternalLink'
 import SVGCalendar from '../elements/SVGCalendar'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 interface Item {
     id: number;
     image: string;
+    href : string;
     demoVideo_2: string;
     category : string;
     fsd_smallcategory : string;
@@ -18,17 +20,20 @@ interface Item {
 
 const HomeFeed = () => {
     const [isHovered, setIsHovered] = React.useState<number | null>(null)
+    const router = useRouter()
 
     const filteredSortedData : Item[] = [
-      { id: 1, image: 'image1.jpg', demoVideo_2: 'video1.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : '2024-01-01' , endDate : '2024-02-01'},
-      { id: 2, image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : '2024-01-01' , endDate : '2024-02-01'},
-      { id: 3, image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : '2024-01-01' , endDate : '2024-02-01'},
-      { id: 4, image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
-      { id: 5, image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
-      // { id: 6, image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
-      // { id: 7, image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
-    ]
+      { id: 1,  href : '/projects/sto', image: 'image1.jpg', demoVideo_2: 'video1.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : '2024-01-01' , endDate : '2024-02-01'},
+      { id: 2,  href : '/projects/nobroker', image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : '2024-01-01' , endDate : '2024-02-01'},
+      { id: 3,  href : '/projects/monami', image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : '2024-01-01' , endDate : '2024-02-01'},
+      { id: 4,  href : '/projects/wesAnderson', image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
+      { id: 5,  href : '/projects/unrealBuyeo', image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
+      { id: 6,  href : '/projects/unrealVenus', image: 'image2.jpg', demoVideo_2: 'video2.mp4' , category : "feature" , fsd_smallcategory : 'small category', fsd_mediumcategory : 'project' , startDate : 'startDate' , endDate : 'endDate'},
+      ]
 
+    const handleCardItem = (href : string) => {
+      router.push(href)
+    }
 
   return (
     <>
@@ -40,8 +45,8 @@ const HomeFeed = () => {
           return (
             <li
               key={index}
-              className="flex flex-col justify-center cursor-pointer   "
-            //   onClick={() => handleCardItem(item.id)}
+              className="flex flex-col justify-center cursor-pointer"
+              onClick={() => handleCardItem(item.href)}
             >
               <figure
                 // className="relative h-[200px]  bg-cover w-[315px]  bg-no-repeat  rounded-lg hover:scale-105 transition-all duration-500 ease-in-out"
