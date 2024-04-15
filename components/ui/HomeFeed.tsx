@@ -30,18 +30,18 @@ const HomeFeed = () => {
       profile: "/projects/sto/archi_thumbnail.png",
       href: "/projects/sto",
       projectDesc: "부동산 STO 토큰 발행, 청약, 거래 플랫폼",
-      projectName: "stoProject",
+      projectName: "STO Project",
       startNendDate: "24.01.01 - 24.02.01",
     },
     {
       id: 2,
       thumbnail:
-        "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      profile: "/projects/sto/archi_thumbnail.png",
-      href: "/projects/sto",
+        "/projects/nobroker/demo/nobroker_estateList.gif",
+      profile: "/projects/nobroker/demo/nobroker_estateList.gif",
+      href: "/projects/nobroker",
       projectName: "Nobroker Project",
       projectDesc: "블록체인 기반 탈중앙화 부동산 거래 플랫폼",
-      startNendDate: "24.01.01 - 24.02.01",
+      startNendDate: "24.07.01 - 24.08.01",
     },
     {
       id: 3,

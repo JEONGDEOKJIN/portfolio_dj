@@ -1,8 +1,6 @@
 "use client";
 
 import FeedDetail from "@/components/FeedDetail";
-import Footer from "@/components/Footer";
-import { sleep } from "@/lib/utils";
 import React from "react";
 
 const page = async (props: any) => {

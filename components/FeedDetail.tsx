@@ -15,6 +15,7 @@ import ProjectName from "@/contents/ProjectName";
 import HeaderBanner from "./elements/HeaderBanner";
 import CarouselArchitecture from "./CarouselArchitecture";
 import { dummyProjectSTO } from "@/lib/DummyDataDJ";
+import {dummyNobrokerProject} from "@/lib/DummyDataDJ";
 
 const FeedDetail = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -26,8 +27,10 @@ const FeedDetail = () => {
   const [isDemoImageHover, setIsDemoImageHover] = useState(false);
 
   const [...projectSTO] = dummyProjectSTO;
+  const [...projectNobroker] = dummyNobrokerProject;
   console.log("projectName@projectSTO", projectSTO[0].projectName); // 🔵 정상적으로 나옴, 첫번째 배열이 그대로 잘 나오기
-
+  
+  
 
   const handleArchitectureImage = () => {
     setIsArchitectureImageZoomed(!isArchitectureImageZoomed);
