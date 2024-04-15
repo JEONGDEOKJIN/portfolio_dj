@@ -17,6 +17,9 @@ import CarouselArchitecture from "../components/CarouselArchitecture";
 import { dummyNobrokerProject } from "@/lib/DummyDataDJ";
 import CarouselArchitectureNobroker from "@/components/CarouselArchitectureNobroker";
 import MainFeatureNobroker from "./MainFeatureNobroker";
+import TechTaskNobroker from "./TechTaskNobroker";
+import CommunicationNobroker from "./CommunicationNobroker";
+import DeliverableNobroker from "./DeliverableNobroker";
 
 const FeedDetailNobroker = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -146,11 +149,12 @@ const FeedDetailNobroker = () => {
                   <ServiceDesc serviceDesc={projectNobroker[0].serviceDesc} />
                   <Team teamData={projectNobroker[0].team} />
                   <Role myRole={projectNobroker[0].myRole} />
+
                   <MainFeatureNobroker />
 
-                  <TechTask />
-                  <Communication />
-                  <Deliverable />
+                  <TechTaskNobroker />
+                  <CommunicationNobroker />
+                  <DeliverableNobroker />
                 </div>
 
                 <InformationRight />
