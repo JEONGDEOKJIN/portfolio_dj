@@ -49,8 +49,8 @@ const HomeFeed = () => {
         "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
       profile: "/projects/sto/archi_thumbnail.png",
       href: "/projects/sto",
-      projectDesc: "sto project",
-      projectName: "stoProject",
+      projectDesc: "✅작성중",
+      projectName: "✅작성중",
       startNendDate: "24.01.01 - 24.02.01",
     },
     {
@@ -59,8 +59,8 @@ const HomeFeed = () => {
         "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
       profile: "/projects/sto/archi_thumbnail.png",
       href: "/projects/sto",
-      projectDesc: "sto project",
-      projectName: "stoProject",
+      projectDesc: "✅작성중",
+      projectName: "✅작성중",
       startNendDate: "24.01.01 - 24.02.01",
     },
     {
@@ -69,8 +69,8 @@ const HomeFeed = () => {
         "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
       profile: "/projects/sto/archi_thumbnail.png",
       href: "/projects/sto",
-      projectDesc: "sto project",
-      projectName: "stoProject",
+      projectDesc: "✅작성중",
+      projectName: "✅작성중",
       startNendDate: "24.01.01 - 24.02.01",
     },
     {
@@ -79,8 +79,8 @@ const HomeFeed = () => {
         "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
       profile: "/projects/sto/archi_thumbnail.png",
       href: "/projects/sto",
-      projectDesc: "sto project",
-      projectName: "stoProject",
+      projectDesc: "✅작성중",
+      projectName: "✅작성중",
       startNendDate: "24.01.01 - 24.02.01",
     },
   ];
