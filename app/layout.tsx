@@ -2,8 +2,19 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/themeProviders";
+import localFont from "next/font/local";
 
+
+// 기본 글꼴
 const inter = Inter({ subsets: ["latin"] });
+
+// 프리텐다드 글꼴
+const pretendard = localFont({
+  src: "./fonts/PretendardVariable.woff2",
+  display : "swap", 
+  weight: "45 920", // weight 를 입력하지 않으면, WebKit 기반의 브라우저에서 굵기가 잘못 렌더링 될 수 있으니 주의
+})
+
 
 export const metadata: Metadata = {
   title: "DJ Portfolio",
@@ -17,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} >
+      <body className={pretendard.className} >
         <ThemeProvider
           attribute="class"
           // defaultTheme="dark" // dark 모드

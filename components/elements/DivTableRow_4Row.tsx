@@ -21,7 +21,7 @@ const DivTableRow_4Row: React.FC<DivTableRow_4Row> = ({
     <>
       {/* {functionalRequirement.map((item: any, index: any) => {
         return ( */}
-          <div className="flex text-[14px] text-gray-800 border-t-[1px] border-neutral-200 ">
+          <div className="flex text-[16px] text-gray-800 border-t-[1px] border-neutral-200 ">
             <div className="flex items-center justify-center w-[200px] shrink-0 border-b-[1px] border-r-[1px] border-neutral-200 p-3">
               {criteriaDesc_1} 
             </div>

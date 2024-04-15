@@ -48,7 +48,7 @@ const ProfileSection = () => {
           Jeong! Deokjin
         </h5>
 
-        <div className="text-center text-gray-600 text-[14px]">
+        <div className="text-center text-gray-600 text-[16px]">
           <p>효율적인 방식으로</p>
           <p>좋은 잔상이 남을 수 있게 만듭니다.</p>
         </div>

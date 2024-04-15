@@ -22,7 +22,7 @@ const MainFeature = () => {
           <strong>주요 기능 및 UI</strong>
         </h5>
 
-        <article className="flex flex-col border-neutral-200   ">
+        <article className="flex flex-col border-neutral-200    ">
           {/* <figure className="relative w-[870px] h-[450px]"> */}
           <article className="relative  text-white w-full h-full mainfeatureMargin flex items-center justify-center">
             <Carousel className="w-full max-w-[80%]  ">
@@ -57,7 +57,7 @@ const MainFeature = () => {
           </article>
           {/* </figure> */}
 
-          <div className=" marginTopGlobalCSS">
+          <div className=" marginTopGlobalCSS ">
             <article className="mt-5">
               <DivTableRow_4Row
                 criteriaDesc_1="STO 토큰 발행"

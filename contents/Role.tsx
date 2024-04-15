@@ -7,7 +7,7 @@ const Role = ({ myRole }: any) => {
         <h5 className="text-[20px] leading-[1.6em] w-full">
           <strong>본인 역할</strong>
         </h5>
-        <span className="text-[14px] marginTopGlobalCSS ">{myRole}</span>
+        <span className="text-[16px] marginTopGlobalCSS ">{myRole}</span>
       </div>
     </>
   );

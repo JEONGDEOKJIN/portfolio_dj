@@ -87,7 +87,6 @@
 
 .mainfeatureDesc {
   background-color : rgba(50,50,50, 0.85);
-  
   bottom : -10px
 }
 
@@ -111,7 +110,7 @@
 }
 
 .marginTopGlobalCSS {
-  margin-top : 5px
+  margin-top : 10px;
 }
 
 .widthServiceDescglabalCSS {

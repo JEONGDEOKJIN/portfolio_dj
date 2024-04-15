@@ -17,7 +17,7 @@ const DivTableRowHeader: React.FC<DivTableRowHeaderProps>= ({
 }) => {
   return (
     <>
-      <div className="flex text-[14px] text-gray-900 border-t-[1px] border-neutral-200 ">
+      <div className="flex text-[16px] text-gray-900 border-t-[1px] border-neutral-200 ">
         <div className="w-[10%]  grow  border-r-[1px] border-neutral-200 text-center py-3">
           {criteria_1}
         </div>
