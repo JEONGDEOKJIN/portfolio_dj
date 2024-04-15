@@ -60,43 +60,42 @@ const MainFeature = () => {
           <div className=" marginTopGlobalCSS ">
             <article className="mt-5">
               <DivTableRow_4Row
-                criteriaDesc_1="Admin 페이지"
-                criteriaDesc_2="가입한 회원의 등급 관리. 건물주의 경우 실명인증 및 자격요건 검토를 통해 정식 판매업자로 등록"
+                criteriaDesc_1="STO 토큰 발행"
+                criteriaDesc_2="[Admin] 유저가 소유하고 있는 부동산을 DB에 등록하고, 관리자의 승인을 받으면, STO 토큰으로 등록될 수 있음"
                 criteriaDesc_3=""
               />
             </article>
             <article>
               <DivTableRow_5Row
-                criteriaDesc_1="매물 리스트"
-                criteriaDesc_2="DB에서 거래 가능한 매물 데이터를 응답받아, Google map api 활용하여 검색, 필터, 분류, 클러스터링, ZOOM 기능 제공 "
-                criteriaDesc_3=""
+                criteriaDesc_1="STO 토큰 청약"
+                criteriaDesc_2="[User] 부동산 소유주가 등록한 부동산을 n개의 토큰으로 분할하고, 이를 청약하는 기능. 공모일까지 00 개의 청약을 완료하면 100% 청약 달성"                criteriaDesc_3=""
               />
             </article>
             <article>
               <DivTableRow_5Row
-                criteriaDesc_1="매물 등록"
-                criteriaDesc_2="주소, 사용자 정보, 부동산 정보 등을 입력하여 졍식 매물로 인정받는 절차. kakao map 연동하여 미리보기 제공"
+                criteriaDesc_1="STO 토큰 거래"
+                criteriaDesc_2="[User] 청약 완료 된 후, 사용자 마켓 페이지에서 거래를 진행할 수 있음. 현재 시가, 최근 7일 간의 시세 등을 반영하여 의사결정할 수 있음"
                 criteriaDesc_3=""
               />
             </article>
             <article>
               <DivTableRow_5Row
                 criteriaDesc_1="투표"
-                criteriaDesc_2="사용자들이 해당 매물이 허위인지를 구분하는 투표를 진행. 투표 진행시 허위매물로 신고되면 해당 건물주는 판매자 자격 박탈"
+                criteriaDesc_2="[Admin 및 User] 해당 토큰을 갖고 있는 유저가 안건을 제시하고, Admin이 그 중 일부에 대한 안건을 투표로 상정하여, 해당 부동산에 대한 의사결정을 투표를 통해 결정함"
                 criteriaDesc_3=""
               />
             </article>
             <article>
               <DivTableRow_5Row
-                criteriaDesc_1="매물 상세"
-                criteriaDesc_2="해당 매물의 사진, 정보를 한 눈에 파악할 수 있는 페이지, 댓글 기능 및 거래 신청 가능"
+                criteriaDesc_1="Admin 게시판"
+                criteriaDesc_2="[Admin] 사용자, 청약, 거래, 게시글에 대한 정보를 조회할 수 있고, 투표 등록, 게시글 등록, 블랙리스트 유저 등록, 매물 등록, 청약 등록 등의 기능"
                 criteriaDesc_3=""
               />
             </article>
             <article>
               <DivTableRow_5Row
-                criteriaDesc_1="마이 페이지"
-                criteriaDesc_2="회원 정보, 매물 등록 및 거래 내역을 확인할 수 있는 페이지"
+                criteriaDesc_1="Admin 대시보드"
+                criteriaDesc_2="[Admin] 최근 7일간의 매출, 공모금액, 거래금액, 회원가입수, 블랙리스트 유저, 최근 거래 등에 대한 확인 "
                 criteriaDesc_3=""
               />
             </article>

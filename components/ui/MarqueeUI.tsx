@@ -17,24 +17,27 @@ const MarqueeUI = () => {
             {/* <Marquee speed={60}> */}
             <div className="flex flex-row  w-full">
               <MarqueeItem
+                imgHref ={`item_1.jpg`}
                 desc_1={"STO Project"}
                 desc_2={"admin UI"}
                 stack_1={"Next.js"}
                 stack_2={"TailwindCSS"}
                 stack_3={"TypeScript"}
-                cssFilters={"sepia"}
+                // cssFilters={"sepia"}
               />
 
               <MarqueeItem
+                imgHref ={`item_2.jpg`}
                 desc_1={"STO Project"}
                 desc_2={"admin UI"}
                 stack_1={"Next.js"}
                 stack_2={"TailwindCSS"}
                 stack_3={"TypeScript"}
-                cssFilters={"sepia"}
+                // cssFilters={"sepia"}
               />
 
               <MarqueeItem
+                imgHref ={`item_3.jpg`}
                 desc_1={"Monami Project"}
                 desc_2={"CRUD"}
                 stack_1={"Node.js"}
@@ -44,6 +47,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
+                imgHref ={`item_4.jpg`}
                 desc_1={"Monami Project"}
                 desc_2={"CRUD"}
                 stack_1={"Node.js"}
@@ -53,6 +57,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
+                imgHref ={`item_5.jpg`}
                 desc_1={"Nobroker Project"}
                 desc_2={"map UI"}
                 stack_1={"React.js"}
@@ -62,6 +67,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
+                imgHref ={`item_6.jpg`}
                 desc_1={"Monami Project"}
                 desc_2={"CRUD"}
                 stack_1={"Node.js"}
@@ -71,6 +77,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
+                imgHref ={`item_7.jpg`}
                 desc_1={"WesAnderson Project"}
                 desc_2={"responsive UI"}
                 stack_1={"Javascript"}
@@ -80,6 +87,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
+                imgHref ={`item_2.jpg`}
                 desc_1={"Unreal Project"}
                 desc_2={"부여 미디어 페스티벌 출품"}
                 stack_1={"Unreal"}
