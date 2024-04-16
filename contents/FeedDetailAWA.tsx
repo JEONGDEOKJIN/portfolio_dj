@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import HeaderProfile from "./HeaderProfile";
-import IconCancelZoomImage from "./elements/IconCancelZoomImage";
-import ProfileSection from "./ProfileSection";
+import HeaderProfile from "../components/HeaderProfile";
+import IconCancelZoomImage from "../components/elements/IconCancelZoomImage";
+import ProfileSection from "../components/ProfileSection";
 import Image from "next/image";
 import InformationRight from "@/contents/InformationRight";
 import MainFeature from "@/contents/MainFeature";
@@ -12,11 +12,27 @@ import Team from "@/contents/Team";
 import Role from "@/contents/Role";
 import ServiceDesc from "@/contents/ServiceDesc";
 import ProjectName from "@/contents/ProjectName";
-import HeaderBanner from "./elements/HeaderBanner";
-import CarouselArchitecture from "./CarouselArchitecture";
-import { dummyProjectSTO } from "@/lib/DummyDataDJ";
+import HeaderBanner from "../components/elements/HeaderBanner";
+import CarouselArchitecture from "../components/CarouselArchitecture";
+import { dummyAWAProject } from "@/lib/DummyDataDJ";
+import CarouselArchitectureNobroker from "@/components/CarouselArchitectureNobroker";
+import MainFeatureNobroker from "./MainFeatureNobroker";
+import TechTaskNobroker from "./TechTaskNobroker";
+import CommunicationNobroker from "./CommunicationNobroker";
+import DeliverableNobroker from "./DeliverableNobroker";
+import CarouselArchitectureMonami from "@/components/CarouselArchitectureMonami";
+import MainFeatureMonami from "./MainFeatureMonami";
+import TechTaskMonami from "./TechTaskMonami";
+import CommunicationMonami from "./CommunicationMonami";
+import DeliverableMonami from "./DeliverableMonami";
+import InformationRightMonami from "./InformationRightMonami";
+import MainFeatureAWA from "./MainFeatureAWA";
+import TechTaskAWA from "./TechTaskAWA";
+import CommunicationAWA from "./CommunicationAWA";
+import DeliverableAWA from "./DeliverableAWA";
+import InformationRightAWA from "./InformationRightAWA";
 
-const FeedDetail = () => {
+const FeedDetailAWA = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
   const [isArchitectureImageZoomed, setIsArchitectureImageZoomed] =
     useState(false);
@@ -25,8 +41,8 @@ const FeedDetail = () => {
   const [isDemoImageZoomed, setIsDemoImageZoomed] = useState(false);
   const [isDemoImageHover, setIsDemoImageHover] = useState(false);
 
-  const [...projectSTO] = dummyProjectSTO;
-  console.log("projectName@projectSTO", projectSTO[0].projectName); // 🔵 정상적으로 나옴, 첫번째 배열이 그대로 잘 나오기
+  const [...projectAWA] = dummyAWAProject;
+  console.log("projectName@projectAWA", projectAWA[0].projectName); // 🔵 정상적으로 나옴, 첫번째 배열이 그대로 잘 나오기
 
   const handleArchitectureImage = () => {
     setIsArchitectureImageZoomed(!isArchitectureImageZoomed);
@@ -42,38 +58,38 @@ const FeedDetail = () => {
         <HeaderBanner />
 
         <div className="fixed inset-0 z-50 flex flex-col w-full h-full overflow-y-auto transition-opacity duration-300 ease-in-out bg-white inset-y-9">
-          {<HeaderProfile title={projectSTO[0].projectName} />}
+          {<HeaderProfile title={projectAWA[0].projectName} />}
 
           {/* 💪 mx-auto 하면 이제 가운데로 오긴 하는데, flex 를 써서 깔끔하게 오게 하고 싶긴 함  */}
           <main className="w-full bg-[neutral-50] max-w-[1200px] mx-auto rounded-[64px] p-10">
             <section className="w-full ">
               {/* 사진 */}
               <article className=" x-full flex flex-row justify-normal gap-[24px]">
-                {projectSTO && projectSTO[0].architectureImageHref && (
-                  <figure
-                    onClick={() => handleArchitectureImage()}
-                    onMouseEnter={() => setIsArchitectureImageHover(true)}
-                    onMouseLeave={() => setIsArchitectureImageHover(false)}
-                    className="relative cursor-pointer shadow w-[400px] h-[450px]  bg-no-repeat bg-cover rounded-[40px]"
-                  >
-                    <Image
-                      fill
-                      alt="architecture image"
-                      className="rounded-[40px] "
-                      // objectFit="contain"
-                      style={{ objectFit: "cover" }}
-                      src={`${projectSTO[0].architectureImageThumbnail}`}
-                    />
+                {/* {projectAWA &&
+                  projectAWA[0].architectureImageHref && (
+                    <figure
+                      onClick={() => handleArchitectureImage()}
+                      onMouseEnter={() => setIsArchitectureImageHover(true)}
+                      onMouseLeave={() => setIsArchitectureImageHover(false)}
+                      className="relative cursor-pointer shadow w-[400px] h-[450px]  bg-no-repeat bg-cover rounded-[40px]"
+                    >
+                      <Image
+                        fill
+                        alt="architecture image"
+                        className="rounded-[40px] "
+                        objectFit="contain"
+                        src={`${projectAWA[0].architectureImageThumbnail}`}
+                      />
 
-                    {isArchitectureImageHover && (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center w-full y-full bg-gradient-to-b rounded-[40px] from-black/50 to-black/50">
-                        <p className="font-medium text-[16px] text-neutral-50 border-white border-[1px] p-2 rounded-[5px] ">
-                          아키텍처 자세히보기
-                        </p>
-                      </div>
-                    )}
-                  </figure>
-                )}
+                      {isArchitectureImageHover && (
+                        <div className="absolute inset-0 flex flex-col items-center justify-center w-full y-full bg-gradient-to-b rounded-[40px] from-black/50 to-black/50">
+                          <p className="font-medium text-[16px] text-neutral-50 border-white border-[1px] p-2 rounded-[5px] ">
+                            아키텍처 자세히보기
+                          </p>
+                        </div>
+                      )}
+                    </figure>
+                  )} */}
 
                 {isArchitectureImageZoomed && (
                   <div className="fixed inset-0 z-30 flex items-center justify-center bg-black/90">
@@ -84,11 +100,11 @@ const FeedDetail = () => {
                       <IconCancelZoomImage />
                     </div>
 
-                    <CarouselArchitecture />
+                    <CarouselArchitectureMonami />
                   </div>
                 )}
 
-                {projectSTO && projectSTO[0].image && (
+                {projectAWA && projectAWA[0].image && (
                   <figure
                     onClick={() => handleDemoImage()}
                     onMouseEnter={() => setIsDemoImageHover(true)}
@@ -97,7 +113,7 @@ const FeedDetail = () => {
                   >
                     <video
                       className="object-cover w-full h-full rounded-[40px]"
-                      src={"/video/STO_dashborad&board.mp4"}
+                      src={projectAWA[0].projectDemo}
                       muted
                       autoPlay
                       controls
@@ -124,7 +140,7 @@ const FeedDetail = () => {
                     <figure className=" relative w-full  max-w-[90%] max-h-[90%] h-full z-50 bg-no-repeat bg-contain bg-center shadow cursor-pointer">
                       <video
                         className="w-full h-full rounded-[40px]"
-                        src={"/video/STO_dashborad&board.mp4"}
+                        src={projectAWA[0].projectDemo}
                         autoPlay
                         controls
                       ></video>
@@ -136,26 +152,30 @@ const FeedDetail = () => {
               <article className="relative shadow flex flex-row  gap-[24px] px-10 rounded-[64px] mt-[24px] py-10 bg-[#f9f9f9] h-full  ">
                 {/* 왼쪽 */}
                 <div className="relative flex flex-col flex-wrap gap-[56px] h-full w-[80%]">
-                  {/* <article className="flex ">
-                    <BadgeIcon desc={projectSTO[0].endDate} />
-                    <BadgeIconText desc={"project"} />
-                  </article> */}
-
                   <ProjectName
-                    stacks={projectSTO[0].stacks}
-                    projectName={projectSTO[0].projectName}
+                    stacks={projectAWA[0].stacks}
+                    projectName={projectAWA[0].projectName}
                   />
 
-                  <ServiceDesc serviceDesc={projectSTO[0].serviceDesc} />
-                  <Team teamData={projectSTO[0].team} />
-                  <Role myRole={projectSTO[0].myRole} />
-                  <MainFeature />
-                  <TechTask />
-                  <Communication />
-                  <Deliverable />
-                </div>
+                  <ServiceDesc serviceDesc={projectAWA[0].serviceDesc} />
+                  <Team teamData={projectAWA[0].team} />
+                  <Role myRole={projectAWA[0].myRole} />
 
-                <InformationRight />
+                  <MainFeatureAWA />
+
+                  <TechTaskAWA />
+
+                  <CommunicationAWA />
+
+                  <section className="p-8" />
+
+                  {/* <DeliverableAWA /> */}
+
+
+                </div>
+                
+                <InformationRightAWA />
+
               </article>
             </section>
 
@@ -169,4 +189,4 @@ const FeedDetail = () => {
   );
 };
 
-export default FeedDetail;
+export default FeedDetailAWA;

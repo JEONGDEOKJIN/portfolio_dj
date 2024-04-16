@@ -27,7 +27,8 @@ const CarouselArchitectureMonami = () => {
                     <figure className="relative w-full  max-w-[90%] max-h-[90%] h-full z-50 bg-no-repeat bg-cover bg-center shadow cursor-pointer">
                       <Image
                         fill
-                        objectFit="contain"
+                        // objectFit="contain"
+                        style={{objectFit:"cover"}}
                         alt="architecture image"
                         className="rounded-[40px] object-cover w-full h-full"
                         src={`${item.href}`}

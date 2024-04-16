@@ -37,7 +37,8 @@ const MainFeatureNobroker = () => {
                               fill
                               alt="architecture image"
                               className="rounded-[40px]"
-                              objectFit="contain"
+                              // objectFit="contain"
+                              style={{ objectFit: "cover" }}
                               src={`${item.href}`}
                             />
 

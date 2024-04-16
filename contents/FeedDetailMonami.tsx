@@ -60,31 +60,31 @@ const FeedDetailMonami = () => {
             <section className="w-full ">
               {/* 사진 */}
               <article className=" x-full flex flex-row justify-normal gap-[24px]">
-                {projectMonami &&
-                  projectMonami[0].architectureImageHref && (
-                    <figure
-                      onClick={() => handleArchitectureImage()}
-                      onMouseEnter={() => setIsArchitectureImageHover(true)}
-                      onMouseLeave={() => setIsArchitectureImageHover(false)}
-                      className="relative cursor-pointer shadow w-[400px] h-[450px]  bg-no-repeat bg-cover rounded-[40px]"
-                    >
-                      <Image
-                        fill
-                        alt="architecture image"
-                        className="rounded-[40px] "
-                        objectFit="contain"
-                        src={`${projectMonami[0].architectureImageThumbnail}`}
-                      />
+                {projectMonami && projectMonami[0].architectureImageHref && (
+                  <figure
+                    onClick={() => handleArchitectureImage()}
+                    onMouseEnter={() => setIsArchitectureImageHover(true)}
+                    onMouseLeave={() => setIsArchitectureImageHover(false)}
+                    className="relative cursor-pointer shadow w-[400px] h-[450px]  bg-no-repeat bg-cover rounded-[40px]"
+                  >
+                    <Image
+                      fill
+                      alt="architecture image"
+                      className="rounded-[40px] "
+                      // objectFit="contain"
+                      style={{ objectFit: "cover" }}
+                      src={`${projectMonami[0].architectureImageThumbnail}`}
+                    />
 
-                      {isArchitectureImageHover && (
-                        <div className="absolute inset-0 flex flex-col items-center justify-center w-full y-full bg-gradient-to-b rounded-[40px] from-black/50 to-black/50">
-                          <p className="font-medium text-[16px] text-neutral-50 border-white border-[1px] p-2 rounded-[5px] ">
-                            아키텍처 자세히보기
-                          </p>
-                        </div>
-                      )}
-                    </figure>
-                  )}
+                    {isArchitectureImageHover && (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center w-full y-full bg-gradient-to-b rounded-[40px] from-black/50 to-black/50">
+                        <p className="font-medium text-[16px] text-neutral-50 border-white border-[1px] p-2 rounded-[5px] ">
+                          아키텍처 자세히보기
+                        </p>
+                      </div>
+                    )}
+                  </figure>
+                )}
 
                 {isArchitectureImageZoomed && (
                   <div className="fixed inset-0 z-30 flex items-center justify-center bg-black/90">
@@ -161,12 +161,11 @@ const FeedDetailMonami = () => {
                   <TechTaskMonami />
 
                   <CommunicationMonami />
-                  
+
                   <DeliverableMonami />
                 </div>
-                
-                <InformationRightMonami />
 
+                <InformationRightMonami />
               </article>
             </section>
 

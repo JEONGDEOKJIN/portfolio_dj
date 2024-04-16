@@ -35,8 +35,7 @@ const HomeFeed = () => {
     },
     {
       id: 2,
-      thumbnail:
-        "/projects/nobroker/demo/nobroker_estateList.gif",
+      thumbnail: "/projects/nobroker/demo/nobroker_estateList.gif",
       profile: "/projects/nobroker/demo/nobroker_estateList.gif",
       href: "/projects/nobroker",
       projectName: "Nobroker Project",
@@ -45,9 +44,8 @@ const HomeFeed = () => {
     },
     {
       id: 3,
-      thumbnail:
-        "/projects/monami/demo/monami_boardList.gif",
-      profile: "/projects/sto/archi_thumbnail.png",
+      thumbnail: "/projects/monami/demo/monami_boardList.gif",
+      profile: "/projects/monami/features/monami_board.JPG",
       href: "/projects/monamis",
       projectName: "그림 일심동체 Project",
       projectDesc: "'엥? 이게 그거라고?' 원초적인 재미를 느낄 수 있는 프로젝트",
@@ -55,34 +53,34 @@ const HomeFeed = () => {
     },
     {
       id: 4,
-      thumbnail:
-        "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      profile: "/projects/sto/archi_thumbnail.png",
-      href: "/projects/sto",
-      projectDesc: "✅작성중",
-      projectName: "✅작성중",
-      startNendDate: "24.01.01 - 24.02.01",
+      thumbnail: "/projects/AWA/demo/wesAndersonMain.gif",
+      profile: "/projects/AWA/features/WesMain.jpg",
+      href: "/projects/wesAnderson",
+      projectDesc: "'웨스 앤더슨의 미학' 모아놓은 AWA 클론 프로젝트 ",
+      projectName: "Accidently WesAnderson Project",
+      startNendDate: "24.04.01 - 24.04.30",
     },
-    {
-      id: 5,
-      thumbnail:
-        "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      profile: "/projects/sto/archi_thumbnail.png",
-      href: "/projects/sto",
-      projectDesc: "✅작성중",
-      projectName: "✅작성중",
-      startNendDate: "24.01.01 - 24.02.01",
-    },
-    {
-      id: 6,
-      thumbnail:
-        "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
-      profile: "/projects/sto/archi_thumbnail.png",
-      href: "/projects/sto",
-      projectDesc: "✅작성중",
-      projectName: "✅작성중",
-      startNendDate: "24.01.01 - 24.02.01",
-    },
+
+    // {
+    //   id: 5,
+    //   thumbnail:
+    //     "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
+    //   profile: "/projects/sto/archi_thumbnail.png",
+    //   href: "/projects/sto",
+    //   projectDesc: "✅작성중",
+    //   projectName: "✅작성중",
+    //   startNendDate: "24.01.01 - 24.02.01",
+    // },
+    // {
+    //   id: 6,
+    //   thumbnail:
+    //     "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
+    //   profile: "/projects/sto/archi_thumbnail.png",
+    //   href: "/projects/sto",
+    //   projectDesc: "✅작성중",
+    //   projectName: "✅작성중",
+    //   startNendDate: "24.01.01 - 24.02.01",
+    // },
   ];
 
   const handleCardItem = (href: string) => {
@@ -109,7 +107,8 @@ const HomeFeed = () => {
                 >
                   <Image
                     fill
-                    objectFit="contain"
+                    // objectFit="contain"
+                    style={{ objectFit: "cover" }}
                     alt="home feed item"
                     className="object-cover rounded-[24px]"
                     src={item.thumbnail}
