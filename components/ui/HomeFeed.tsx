@@ -31,7 +31,7 @@ const HomeFeed = () => {
       href: "/projects/sto",
       projectDesc: "부동산 STO 토큰 발행, 청약, 거래 플랫폼",
       projectName: "STO Project",
-      startNendDate: "24.01.01 - 24.02.01",
+      startNendDate: "23.11.01 - 23.12.01",
     },
     {
       id: 2,
@@ -41,17 +41,17 @@ const HomeFeed = () => {
       href: "/projects/nobroker",
       projectName: "Nobroker Project",
       projectDesc: "블록체인 기반 탈중앙화 부동산 거래 플랫폼",
-      startNendDate: "24.07.01 - 24.08.01",
+      startNendDate: "23.07.01 - 23.08.01",
     },
     {
       id: 3,
       thumbnail:
-        "/projects/sto/demo/admin_realestate_subscriptoin_enrollSTOBtn.gif",
+        "/projects/monami/demo/monami_boardList.gif",
       profile: "/projects/sto/archi_thumbnail.png",
-      href: "/projects/sto",
-      projectDesc: "✅작성중",
-      projectName: "✅작성중",
-      startNendDate: "24.01.01 - 24.02.01",
+      href: "/projects/monamis",
+      projectName: "그림 일심동체 Project",
+      projectDesc: "'엥? 이게 그거라고?' 원초적인 재미를 느낄 수 있는 프로젝트",
+      startNendDate: "23.06.01 - 23.06.30",
     },
     {
       id: 4,
