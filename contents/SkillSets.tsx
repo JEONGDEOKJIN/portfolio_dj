@@ -8,10 +8,11 @@ const SkillSets = () => {
         <article className=" w-full skillset text-black flex gap-5 flex-col  ">
           <figure className="relative w-full h-[100px]">
             <Image
+              style={{objectFit: "cover"} }
               fill
               alt="Skill Desc image"
-              className="rounded-[40px] object-cover w-full h-full"
-              src="/testImage.webp"
+              className="rounded-[24px]  w-full h-full"
+              src="/dj_skillsets.png"
             />
           </figure>
 
