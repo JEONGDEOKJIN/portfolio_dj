@@ -17,7 +17,7 @@ const Deliverable = () => {
 
         <section className="flex flex-row gap-5 w-full marginTopGlobalCSS">
           <IconSmallRoundedRect 
-            linkHref={`${projectSTO[0].deliverabes.ERD}`} 
+            linkHref={`${projectSTO[0].deliverabes.ERD.linkHref}`} 
             imgSrc = {"/img/ERD_example.png"}
             desc = {"ERD"}
             circleColor = {"#28466c"}
@@ -52,9 +52,16 @@ const Deliverable = () => {
             />
 
           <IconSmallRoundedRect 
-            linkHref={`${projectSTO[0].deliverabes.userFlow.linkHref}`} 
-            imgSrc = {"/img/useflow_example.png"}
-            desc = {"UserFlow"}
+            linkHref={`${projectSTO[0].deliverabes.userDeploy.linkHref}`} 
+            imgSrc = {"/projects/sto/features/user_main.jpg"}
+            desc = {"User 배포"}
+            circleColor = {"#28466c"}
+            />
+
+          <IconSmallRoundedRect 
+            linkHref={`${projectSTO[0].deliverabes.adminDeploy.linkHref}`} 
+            imgSrc = {"/projects/sto/features/admin_main.jpg"}
+            desc = {"Admin 배포"}
             circleColor = {"#28466c"}
             />
 

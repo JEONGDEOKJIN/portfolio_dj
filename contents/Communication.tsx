@@ -5,7 +5,7 @@ import React from "react";
 const Communication = () => {
   return (
     <>
-      <div className="mt-[16px]">
+      <div className="mt-[16px] w-full">
         <h5 className="text-[20px] leading-[1.6em]  ">
           <strong>협업방식</strong>
         </h5>

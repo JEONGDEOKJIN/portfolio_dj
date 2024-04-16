@@ -21,7 +21,7 @@ const MarqueeItem = ({
             className="rounded-[24px] object-cover" // object-cover 를 넣어야 사진이 왜곡없이 꽉참
             src={`/marquee/${imgHref}`}
           />
-          <div className="w-full h-full bg-black rounded-[24px] saturate-50 opacity-30 absolute top-0"></div>
+          <div className="w-full h-full bg-gray-800 rounded-[24px] saturate-50 opacity-65 absolute top-0"></div>
         </figure>
 
         <article className="absolute bottom-4 left-4 text-white text-[13px] flex gap-1 flex-col ">

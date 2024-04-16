@@ -17,7 +17,7 @@ const DeliverableNobroker = () => {
 
         <section className="flex flex-row gap-5 w-full marginTopGlobalCSS">
           <IconSmallRoundedRect 
-            linkHref={`${projectNobroker[0].deliverabes.ERD}`} 
+            linkHref={`${projectNobroker[0].deliverabes.ERD.linkHref}`} 
             imgSrc = {"/img/ERD_example.png"}
             desc = {"ERD"}
             circleColor = {"#28466c"}

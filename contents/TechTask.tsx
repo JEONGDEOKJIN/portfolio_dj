@@ -5,7 +5,7 @@ import React from "react";
 const TechTask = () => {
   return (
     <>
-      <div className="mt-[16px]">
+      <div className="mt-[16px] w-full">
         <h5 className="text-[20px] leading-[1.6em]  ">
           <strong>주요 기술 과제</strong>
         </h5>
