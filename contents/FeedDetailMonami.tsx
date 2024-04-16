@@ -25,6 +25,7 @@ import MainFeatureMonami from "./MainFeatureMonami";
 import TechTaskMonami from "./TechTaskMonami";
 import CommunicationMonami from "./CommunicationMonami";
 import DeliverableMonami from "./DeliverableMonami";
+import InformationRightMonami from "./InformationRightMonami";
 
 const FeedDetailMonami = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -163,8 +164,9 @@ const FeedDetailMonami = () => {
                   
                   <DeliverableMonami />
                 </div>
+                
+                <InformationRightMonami />
 
-                <InformationRight />
               </article>
             </section>
 

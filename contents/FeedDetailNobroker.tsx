@@ -20,6 +20,7 @@ import MainFeatureNobroker from "./MainFeatureNobroker";
 import TechTaskNobroker from "./TechTaskNobroker";
 import CommunicationNobroker from "./CommunicationNobroker";
 import DeliverableNobroker from "./DeliverableNobroker";
+import InformationRightNobroker from "./InformationRightNobroker";
 
 const FeedDetailNobroker = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -157,7 +158,7 @@ const FeedDetailNobroker = () => {
                   <DeliverableNobroker />
                 </div>
 
-                <InformationRight />
+                <InformationRightNobroker />
               </article>
             </section>
 
