@@ -15,6 +15,7 @@ export default async function Home() {
           <div className=" animate-bgColor-cycle rounded-full px-[15px] py-[8px] text-[14px] font-[600]">
             {/* Over 3 million ready-to-work creatives! */}
             Ready-to-work frontend development!
+            {/* 고객 없이, 개발 없다! */}
           </div>
 
           <h1 className="text-6xl font-semibold tracking-tight text-center leading-[70px] font-sans4 w-full">
@@ -43,8 +44,8 @@ export default async function Home() {
               Explore inspiring projects
             </h1>
             <p className="text-center w-[30%] ">
-              지금까지 진행한 프로젝트 입니다. <br></br>
-              부족한 부분을 빠르게 파악해서 개선 해나가겠습니다.  
+              비즈니스 임팩트를 낼 수 있는 개발자가 되기 위해  <br></br>
+              한걸음씩 성장중 입니다.
               {/* From day one, you’ll be part of a lively community of tutors,
               mentors and fellow students that support each other along the way. */}
             </p>
