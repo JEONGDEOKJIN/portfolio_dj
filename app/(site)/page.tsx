@@ -13,7 +13,8 @@ export default async function Home() {
       <main className="w-full h-full flex flex-col justify-evenly items-center gap-[72px] pt-[80px] ">
         <section className="tablet:h-[560px] tablet:max-w-[560px]   flex flex-col justify-evenly items-center gap-[28px]">
           <div className=" animate-bgColor-cycle rounded-full px-[15px] py-[8px] text-[14px] font-[600]">
-            Over 3 million ready-to-work creatives!
+            {/* Over 3 million ready-to-work creatives! */}
+            Ready-to-work frontend development!
           </div>
 
           <h1 className="text-6xl font-semibold tracking-tight text-center leading-[70px] font-sans4 w-full">
@@ -37,9 +38,17 @@ export default async function Home() {
         </section>
 
         <section className="w-full h-full flex flex-col gap-[48px] mt-[42px]">
-          <h1 className="text-[48px] font-[400] tracking-tight text-center">
-            Explore inspiring projects
-          </h1>
+          <article className="flex flex-col items-center gap-3">
+            <h1 className="text-[48px] font-[500] tracking-tight text-center">
+              Explore inspiring projects
+            </h1>
+            <p className="text-center w-[30%] ">
+              지금까지 진행한 프로젝트 입니다. <br></br>
+              부족한 부분을 빠르게 파악해서 개선 해나가겠습니다.  
+              {/* From day one, you’ll be part of a lively community of tutors,
+              mentors and fellow students that support each other along the way. */}
+            </p>
+          </article>
 
           <article className="w-full h-full">
             <HomeFeed />
@@ -48,12 +57,12 @@ export default async function Home() {
 
         <div className="flex flex-col gap-10 mt-[50px]">
           <article className="flex flex-col items-center gap-3">
-            <h1 className="text-[48px] font-[600] tracking-tight text-center">
-              Skill sets
+            <h1 className="text-[48px] font-[500] tracking-tight text-center">
+              Skills
             </h1>
-            <p className="text-center w-[50%] ">
-              From day one, you’ll be part of a lively community of tutors,
-              mentors and fellow students that support each other along the way.
+            <p className="text-center w-[50%]">
+              효율적 & 효과적인 프론트엔드 개발로<br></br>
+              고객 전환율(convention rate) 제고에 기여할 수 있는 개발자가 되겠습니다.
             </p>
           </article>
 
@@ -84,7 +93,7 @@ export default async function Home() {
             <div className="w-full flex items-center justify-center ">
               <div className="w-full h-full flex items-start gap-5 justify-center max-w-[1200px] ">
                 <SkillSets
-                  stackImageHref="React.js"
+                  stackImageHref="react.js"
                   stackName="React.js"
                   desc_1="Recoil, zustand, React-query 활용하여 클라이언트 및 백엔드 데이터 전역상태 관리 경험"
                   desc_2="axios interceptor 활용한 API 요청, 응답 처리 커스텀 훅 제작 경험"
@@ -93,28 +102,20 @@ export default async function Home() {
                 <SkillSets
                   stackImageHref="CSS_library"
                   stackName="CSS 라이브러리"
-                  desc_1="tailwind 및 styled-component, emotion 사용 경험"
-                  desc_2="shadcn 사용하여 컴포넌트 재활용 경험"
+                  desc_1="tailwind 및 styled-component, emotion 경험"
+                  desc_2="shadcn 라이브러리 carousel 등 사용 경험"
                 />
 
                 <SkillSets
-                  stackImageHref="Backendforfrontend"
+                  stackImageHref="BFF"
                   stackName="Backend for Frontend"
                   desc_1="API 명세를 바탕으로 Frontend를 위한 백엔드 express 서버로 CRUD 구현 경험"
                   desc_2="서버 : express | ORM : sequelize | DB : MYSQL, POSTGRES 사용 경험"
                 />
-
               </div>
             </div>
             <div className="w-full flex items-center justify-center ">
               <div className="w-full h-full flex items-start center gap-5 justify-center max-w-[1200px] ">
-                <SkillSets
-                  stackImageHref="deploy"
-                  stackName="배포"
-                  desc_1="vercel 로 클라이언트 배포 경험"
-                  desc_2="AWS EC2 활용하여 리액트 프로젝트 배포 경험"
-                />
-
                 <SkillSets
                   stackImageHref="designSystem"
                   stackName="디자인 시스템"
@@ -122,13 +123,19 @@ export default async function Home() {
                   desc_2="storybook : 재활용성 높은 컴포넌트 제작(예정)"
                   desc_3="Figma : UI/UX Flowchart 제작 경험"
                 />
+
+                <SkillSets
+                  stackImageHref="deploy"
+                  stackName="배포"
+                  desc_1="vercel 로 클라이언트 배포 경험"
+                  desc_2="AWS EC2 활용하여 리액트 프로젝트 배포 경험"
+                />
                 {/*         
                     <div>Photoshop : 선택툴, 블렌드 모드 등을 활용한 이미지 제작</div>
                     <h3>Figma</h3>
                     <div>auto layout 기능 등을 활용한 UI 기획 경험</div>
                     <div>사용자 니즈 반영한 UX 기획 경험</div>
                  */}
-
 
                 {/* <SkillSets
                   stackImageHref="TDD"
@@ -144,7 +151,7 @@ export default async function Home() {
                   desc_2="Solidity : ERC721, ERC20 활용한 NFT 발행 경험"
                   desc_3="TDD : 테스트 환경 구축 경험(예정)"
                 />
-                
+
                 {/* 
                           <div>Unreal : 블루프린트 활용한 3D 애셋 제작 및 레벨 디자인</div>
                           <h3>Solidity</h3>

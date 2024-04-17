@@ -11,7 +11,7 @@ const SkillSets = ({
   return (
     <>
       <section className="w-full h-full">
-        <article className=" w-full skillset text-black flex gap-5 flex-col  ">
+        <article className=" w-full skillset text-black flex gap-5 flex-col   ">
           <figure className="relative w-full h-[120px]">
             <Image
               style={{ objectFit: "cover" }}
@@ -22,13 +22,13 @@ const SkillSets = ({
             />
           </figure>
 
-          <div className="skillsetDescWrapper flex flex-col items-center w-full">
-            <h3 className="text-[24px] font-[400] shrink-0 ">{stackName}</h3>
+          <div className="skillsetDescWrapper flex flex-col items-center w-full ">
+            <h3 className="text-[24px] font-[400] shrink-0  ">{stackName}</h3>
 
-            <div className="flex flex-col gap-2 items-start">
-              <p className="text-[16px] ">{desc_1}</p>
-              <p className="text-[16px] ">{desc_2}</p>
-              {desc_3 && <p className="text-[16px] ">{desc_3}</p>}
+            <div className="flex flex-col gap-2 justify-center items-start h-[100px]">
+              <p className="text-[16px] ">- {desc_1}</p>
+              <p className="text-[16px] ">- {desc_2}</p>
+              {desc_3 && <p className="text-[16px] ">- {desc_3}</p>}
             </div>
           </div>
         </article>
