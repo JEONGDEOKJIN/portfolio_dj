@@ -38,7 +38,7 @@ const MainFeatureAWA = () => {
                               alt="architecture image"
                               className="rounded-[40px]"
                               // objectFit="contain"
-                              style={{ objectFit: "cover" }}
+                              style={{ objectFit: "contain" }}
                               src={`${item.href}`}
                             />
 
