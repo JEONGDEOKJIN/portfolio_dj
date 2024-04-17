@@ -15,6 +15,7 @@ import ProjectName from "@/contents/ProjectName";
 import HeaderBanner from "./elements/HeaderBanner";
 import CarouselArchitecture from "./CarouselArchitecture";
 import { dummyProjectSTO } from "@/lib/DummyDataDJ";
+import OutcomeNobroker from "@/contents/OutcomeNobroker";
 
 const FeedDetail = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -152,7 +153,12 @@ const FeedDetail = () => {
                   <MainFeature />
                   <TechTask />
                   <Communication />
+                  
                   <Deliverable />
+                  
+
+                  <section className="p-10"/> 
+
                 </div>
 
                 <InformationRight />

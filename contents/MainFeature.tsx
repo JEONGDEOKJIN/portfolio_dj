@@ -69,7 +69,7 @@ const MainFeature = () => {
             <article>
               <DivTableRow_5Row
                 criteriaDesc_1="STO 토큰 청약"
-                criteriaDesc_2="[User] 부동산 소유주가 등록한 부동산을 n개의 토큰으로 분할하고, 이를 청약하는 기능. 공모일까지 00 개의 청약을 완료하면 100% 청약 달성"
+                criteriaDesc_2="[User] 부동산 소유주가 등록한 부동산을 n개의 토큰으로 분할하고, 이를 청약하는 기능. 공모일까지 n개의 청약을 완료하면 100% 청약 달성"
                 criteriaDesc_3=""
               />
             </article>

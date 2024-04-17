@@ -21,6 +21,7 @@ import TechTaskNobroker from "./TechTaskNobroker";
 import CommunicationNobroker from "./CommunicationNobroker";
 import DeliverableNobroker from "./DeliverableNobroker";
 import InformationRightNobroker from "./InformationRightNobroker";
+import OutcomeNobroker from "./OutcomeNobroker";
 
 const FeedDetailNobroker = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -156,7 +157,13 @@ const FeedDetailNobroker = () => {
 
                   <TechTaskNobroker />
                   <CommunicationNobroker />
+                  
                   <DeliverableNobroker />
+
+                  <OutcomeNobroker />
+
+                  <section className="p-8"/> 
+
                 </div>
 
                 <InformationRightNobroker />

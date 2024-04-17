@@ -48,7 +48,7 @@ const HomeFeed = () => {
       profile: "/projects/monami/features/monami_board.JPG",
       href: "/projects/monamis",
       projectName: "그림 일심동체 Project",
-      projectDesc: "'엥? 이게 그거라고?' 원초적인 재미를 느낄 수 있는 프로젝트",
+      projectDesc: "'이게 뭘 그린 그림이게~' 원초적인 재미를 느낄 수 있는 프로젝트",
       startNendDate: "23.06.01 - 23.06.30",
     },
     {

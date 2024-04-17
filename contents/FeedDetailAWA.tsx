@@ -31,6 +31,7 @@ import TechTaskAWA from "./TechTaskAWA";
 import CommunicationAWA from "./CommunicationAWA";
 import DeliverableAWA from "./DeliverableAWA";
 import InformationRightAWA from "./InformationRightAWA";
+import OutcomeMonami from "./OutcomeMonami";
 
 const FeedDetailAWA = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -167,8 +168,9 @@ const FeedDetailAWA = () => {
 
                   <CommunicationAWA />
 
-                  <section className="p-8" />
+                  <OutcomeMonami />
 
+                  <section className="p-8" />
                   {/* <DeliverableAWA /> */}
 
 

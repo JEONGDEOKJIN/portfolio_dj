@@ -60,7 +60,6 @@ const DeliverableNobroker = () => {
 
         </section>
 
-        <section className="p-10"/> 
 
       </div>
     </>

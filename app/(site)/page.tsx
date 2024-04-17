@@ -153,12 +153,6 @@ export default async function Home() {
                   desc_3="TDD : 테스트 환경 구축 경험(예정)"
                 />
 
-                {/* 
-                          <div>Unreal : 블루프린트 활용한 3D 애셋 제작 및 레벨 디자인</div>
-                          <h3>Solidity</h3>
-                          <div>ERC721, ERC20 활용한 NFT 발행 경험</div>
-                          <div>뭔가 채용공고, JD 보고 적어야 하나</div>
-                */}
               </div>
             </div>
           </div>

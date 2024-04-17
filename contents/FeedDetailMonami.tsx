@@ -26,6 +26,7 @@ import TechTaskMonami from "./TechTaskMonami";
 import CommunicationMonami from "./CommunicationMonami";
 import DeliverableMonami from "./DeliverableMonami";
 import InformationRightMonami from "./InformationRightMonami";
+import OutcomeNobroker from "./OutcomeNobroker";
 
 const FeedDetailMonami = () => {
   const [isItemDetailOpened, setIsItemDetailOpened] = useState(false);
@@ -163,6 +164,12 @@ const FeedDetailMonami = () => {
                   <CommunicationMonami />
 
                   <DeliverableMonami />
+
+                  <OutcomeNobroker />
+
+                  <section className="p-10" />
+
+
                 </div>
 
                 <InformationRightMonami />
