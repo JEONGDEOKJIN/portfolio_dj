@@ -46,43 +46,115 @@ export default async function Home() {
           </article>
         </section>
 
+        <div className="flex flex-col gap-10 mt-[50px]">
+          <article className="flex flex-col items-center gap-3">
+            <h1 className="text-[48px] font-[600] tracking-tight text-center">
+              Skill sets
+            </h1>
+            <p className="text-center w-[50%] ">
+              From day one, you’ll be part of a lively community of tutors,
+              mentors and fellow students that support each other along the way.
+            </p>
+          </article>
 
-      <div className="flex flex-col gap-10 mt-[50px]">
+          <div className="w-full h-full flex flex-col gap-5">
+            <div className="w-full flex items-center justify-center ">
+              <div className="w-full h-full flex items-start gap-5 justify-center  max-w-[1200px] ">
+                <SkillSets
+                  stackImageHref="next.js"
+                  stackName="Next.js"
+                  desc_1="Promise, then/catch/finally, async/await, 활용하여 비동기 처리 가능"
+                  desc_2="JS로 useEffect, 클래스형 컴포넌트 구현 경험"
+                />
 
-        <article className="flex flex-col items-center gap-3">
-          <h1 className="text-[48px] font-[600] tracking-tight text-center">
-            Skill sets
-          </h1>
-          <p className="text-center w-[50%] ">
-          From day one, you’ll be part of a lively community of tutors,  mentors and fellow students that support each other along the way.
-          </p>
-        </article>
+                <SkillSets
+                  stackImageHref="typescript"
+                  stackName="Typescript"
+                  desc_1="interface 를 이용한 기본적인 type 설정"
+                  desc_2="types 디렉토리 별도 관리하여 타입 정의 경험"
+                />
+                <SkillSets
+                  stackImageHref="javascript"
+                  stackName="Javascript"
+                  desc_1="Promise, then/catch/finally, async/await, 활용하여 비동기 처리 가능"
+                  desc_2="실행 컨텍스트, 이벤트 루프, 클로저, 호이스팅, 콜백함수 등에 대한 이해"
+                />
+              </div>
+            </div>
+            <div className="w-full flex items-center justify-center ">
+              <div className="w-full h-full flex items-start gap-5 justify-center max-w-[1200px] ">
+                <SkillSets
+                  stackImageHref="React.js"
+                  stackName="React.js"
+                  desc_1="Recoil, zustand, React-query 활용하여 클라이언트 및 백엔드 데이터 전역상태 관리 경험"
+                  desc_2="axios interceptor 활용한 API 요청, 응답 처리 커스텀 훅 제작 경험"
+                />
 
-      <div className="w-full h-full flex flex-col gap-5">
+                <SkillSets
+                  stackImageHref="CSS_library"
+                  stackName="CSS 라이브러리"
+                  desc_1="tailwind 및 styled-component, emotion 사용 경험"
+                  desc_2="shadcn 사용하여 컴포넌트 재활용 경험"
+                />
 
-        <div className="w-full flex items-center justify-center ">
-          <div className="w-full h-full flex items-center gap-5 justify-center  max-w-[1200px] ">
-            <SkillSets />
-            <SkillSets />
-            <SkillSets />
+                <SkillSets
+                  stackImageHref="Backendforfrontend"
+                  stackName="Backend for Frontend"
+                  desc_1="API 명세를 바탕으로 Frontend를 위한 백엔드 express 서버로 CRUD 구현 경험"
+                  desc_2="서버 : express | ORM : sequelize | DB : MYSQL, POSTGRES 사용 경험"
+                />
+
+              </div>
+            </div>
+            <div className="w-full flex items-center justify-center ">
+              <div className="w-full h-full flex items-start center gap-5 justify-center max-w-[1200px] ">
+                <SkillSets
+                  stackImageHref="deploy"
+                  stackName="배포"
+                  desc_1="vercel 로 클라이언트 배포 경험"
+                  desc_2="AWS EC2 활용하여 리액트 프로젝트 배포 경험"
+                />
+
+                <SkillSets
+                  stackImageHref="designSystem"
+                  stackName="디자인 시스템"
+                  desc_1="아토믹 디자인 패턴에 대한 이해를 바탕으로 컴포넌트 제작(예정)"
+                  desc_2="storybook : 재활용성 높은 컴포넌트 제작(예정)"
+                  desc_3="Figma : UI/UX Flowchart 제작 경험"
+                />
+                {/*         
+                    <div>Photoshop : 선택툴, 블렌드 모드 등을 활용한 이미지 제작</div>
+                    <h3>Figma</h3>
+                    <div>auto layout 기능 등을 활용한 UI 기획 경험</div>
+                    <div>사용자 니즈 반영한 UX 기획 경험</div>
+                 */}
+
+
+                {/* <SkillSets
+                  stackImageHref="TDD"
+                  stackName="TEST 환경 구축"
+                  desc_1="테스트 환경 구축(예정)"
+                  desc_2=""
+                /> */}
+
+                <SkillSets
+                  stackImageHref="ETC"
+                  stackName="ETC"
+                  desc_1="Unreal : 블루프린트 활용한 3D 애셋 제작 및 레벨 디자인"
+                  desc_2="Solidity : ERC721, ERC20 활용한 NFT 발행 경험"
+                  desc_3="TDD : 테스트 환경 구축 경험(예정)"
+                />
+                
+                {/* 
+                          <div>Unreal : 블루프린트 활용한 3D 애셋 제작 및 레벨 디자인</div>
+                          <h3>Solidity</h3>
+                          <div>ERC721, ERC20 활용한 NFT 발행 경험</div>
+                          <div>뭔가 채용공고, JD 보고 적어야 하나</div>
+                */}
+              </div>
+            </div>
           </div>
         </div>
-        <div className="w-full flex items-center justify-center ">
-          <div className="w-full h-full flex items-center gap-5 justify-center max-w-[1200px] ">
-            <SkillSets />
-            <SkillSets />
-            <SkillSets />
-          </div>
-        </div>
-        <div className="w-full flex items-center justify-center ">
-          <div className="w-full h-full flex items-center gap-5 justify-center max-w-[1200px] ">
-            <SkillSets />
-            <SkillSets />
-            <SkillSets />
-          </div>
-        </div>
-      </div>
-      </div>
       </main>
     </>
   );
