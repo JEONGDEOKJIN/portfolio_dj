@@ -47,7 +47,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
-                imgHref ={`item_4.jpg`}
+                imgHref ={`item_4.gif`}
                 desc_1={"Monami Project"}
                 desc_2={"CRUD"}
                 stack_1={"Node.js"}
@@ -57,7 +57,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
-                imgHref ={`item_5.jpg`}
+                imgHref ={`item_5.gif`}
                 desc_1={"Nobroker Project"}
                 desc_2={"CRUD & Google map"}
                 stack_1={"React.js"}
@@ -77,7 +77,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
-                imgHref ={`item_7.jpg`}
+                imgHref ={`item_7.gif`}
                 desc_1={"WesAnderson Project"}
                 desc_2={"responsive UI"}
                 stack_1={"Javascript"}
