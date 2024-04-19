@@ -29,7 +29,7 @@ const MarqueeUI = () => {
               <MarqueeItem
                 imgHref ={`item_2.jpg`}
                 desc_1={"STO Project"}
-                desc_2={"admin UI"}
+                desc_2={"Admin"}
                 stack_1={"Next.js"}
                 stack_2={"TailwindCSS"}
                 stack_3={"TypeScript"}
