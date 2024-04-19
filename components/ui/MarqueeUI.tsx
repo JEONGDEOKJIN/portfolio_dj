@@ -87,7 +87,7 @@ const MarqueeUI = () => {
               />
 
               <MarqueeItem
-                imgHref ={`item_2.jpg`}
+                imgHref ={`item_8.gif`}
                 desc_1={"Unreal Project"}
                 desc_2={"부여 세계유산 미디어 아트 페스티벌 "}
                 stack_1={"Unreal"}
