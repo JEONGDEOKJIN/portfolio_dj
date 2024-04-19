@@ -19,7 +19,7 @@ const MarqueeUI = () => {
               <MarqueeItem
                 imgHref ={`item_1.jpg`}
                 desc_1={"STO Project"}
-                desc_2={"admin UI"}
+                desc_2={"Dashboard"}
                 stack_1={"Next.js"}
                 stack_2={"TailwindCSS"}
                 stack_3={"TypeScript"}
@@ -38,9 +38,9 @@ const MarqueeUI = () => {
 
               <MarqueeItem
                 imgHref ={`item_3.jpg`}
-                desc_1={"Monami Project"}
-                desc_2={"CRUD"}
-                stack_1={"Node.js"}
+                desc_1={"Nobroker Project"}
+                desc_2={"Admin Board"}
+                stack_1={"React.js"}
                 stack_2={"Javascript"}
                 // stack_3 ={""}
                 // cssFilters = {"grayscale"}
@@ -59,7 +59,7 @@ const MarqueeUI = () => {
               <MarqueeItem
                 imgHref ={`item_5.jpg`}
                 desc_1={"Nobroker Project"}
-                desc_2={"map UI"}
+                desc_2={"CRUD & Google map"}
                 stack_1={"React.js"}
                 stack_2={"React-query"}
                 // stack_3 ={""}
@@ -89,7 +89,7 @@ const MarqueeUI = () => {
               <MarqueeItem
                 imgHref ={`item_2.jpg`}
                 desc_1={"Unreal Project"}
-                desc_2={"부여 미디어 페스티벌 출품"}
+                desc_2={"부여 세계유산 미디어 아트 페스티벌 "}
                 stack_1={"Unreal"}
                 stack_2={"StableDiffusion"}
                 // stack_3 ={""}
