@@ -76,14 +76,17 @@
   }
 
 
+
+
+/* 240619 작업하다 알게된 건, 폰트 설정은 여기가 아님 -> layout 에서 진행 음. pretendard 로 검색해보기*/
 /* 기본 폰트 pretendard 설정 */
-@font-face {
+/* @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 .figureGlobalCSS{
   height : 120px;
@@ -151,7 +154,7 @@
 }
 
 body {
-  font-family: "Pretendard-Regular";
+  /* font-family: "Pretendard-Regular"; */
 }
 
 /* 스크롤바 설정 */

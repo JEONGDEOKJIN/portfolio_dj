@@ -3,6 +3,12 @@ import HomeFeed from "@/components/ui/HomeFeed";
 import MarqueeUI from "@/components/ui/MarqueeUI";
 import SkillSets from "@/contents/SkillSets";
 import { sleep } from "@/lib/utils";
+import { Suspense } from "react";
+import {TestCarousel_2} from "./_components/TestCarousel_2";
+import EmblaCarouselTest from "./_components/EmblaCarouselTest";
+import AntdCarousel from "./_components/AntdCarousel";
+import ParentWindow from "./_components/test/_2_컴포넌트로만들기/ParentWindow";
+import IframePostMessage from "./_components/test/_3_창안띄우고_iframe으로테스트/IframePostMessage";
 
 export default async function Home() {
   // await sleep(2000); // 5초 동안 기다렸다가 실행해라
@@ -11,6 +17,25 @@ export default async function Home() {
     <>
       {/* <main className="tablet:h-[560px] tablet:max-w-[560px] flex flex-col justify-evenly items-center "> */}
       <main className="w-full h-full flex flex-col justify-evenly items-center gap-[72px] pt-[80px] ">
+
+        <section>
+
+          {/* shadcn 에서는 가능🟠 다만, 기존의 공통 컴포넌트 디자인 시스템을 훼손시키는 문제 */}
+          {/* <TestCarousel_2 /> */}
+          
+          {/* 깨져서 나옴 📛 */}
+          {/* <EmblaCarouselTest /> */}
+          
+          {/* 성공🔵 */}
+          {/* <AntdCarousel/> */}
+
+          {/* 성공🔵 */}
+          {/* <ParentWindow /> */}
+
+          <IframePostMessage />
+
+        </section>
+
         <section className="tablet:h-[560px] tablet:max-w-[560px]   flex flex-col justify-evenly items-center gap-[28px]">
           <div className=" animate-bgColor-cycle rounded-full px-[15px] py-[8px] text-[14px] font-[600]">
             {/* Over 3 million ready-to-work creatives! */}
@@ -35,7 +60,9 @@ export default async function Home() {
         </section>
 
         <section className="w-full">
-          <MarqueeUI />
+          <Suspense fallback={<div className="w-[2000px] h-[1000px] bg-green-500">loading...⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ </div>}>
+            <MarqueeUI />
+          </Suspense>
         </section>
 
         <section className="w-full h-full flex flex-col gap-[48px] mt-[42px]">
@@ -44,7 +71,7 @@ export default async function Home() {
               Explore inspiring projects
             </h1>
             <p className="text-center w-[30%] ">
-              비즈니스 임팩트를 낼 수 있는 개발자가 되기 위해  <br></br>
+              비즈니스 임팩트를 낼 수 있는 개발자가 되기 위해 <br></br>
               한걸음씩 성장중 입니다.
               {/* From day one, you’ll be part of a lively community of tutors,
               mentors and fellow students that support each other along the way. */}
@@ -52,7 +79,10 @@ export default async function Home() {
           </article>
 
           <article className="w-full h-full">
-            <HomeFeed />
+            <Suspense fallback={<div className="w-[1000px] h-[100px] bg-blue-500">loading...</div>}>
+              
+              <HomeFeed />
+            </Suspense>
           </article>
         </section>
 
@@ -63,7 +93,8 @@ export default async function Home() {
             </h1>
             <p className="text-center w-[50%]">
               효율적 & 효과적인 프론트엔드 개발로<br></br>
-              고객 전환율(convention rate) 제고에 기여할 수 있는 개발자가 되겠습니다.
+              고객 전환율(convention rate) 제고에 기여할 수 있는 개발자가
+              되겠습니다.
             </p>
           </article>
 
@@ -152,7 +183,6 @@ export default async function Home() {
                   desc_2="Solidity : ERC721, ERC20 활용한 NFT 발행 경험"
                   desc_3="TDD : 테스트 환경 구축 경험(예정)"
                 />
-
               </div>
             </div>
           </div>

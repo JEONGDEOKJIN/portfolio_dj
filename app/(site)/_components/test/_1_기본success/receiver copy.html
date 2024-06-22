@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
+</head>
+
+<body>
+
+  <input class="child" type="text" />
+  <button class="child">send</button>
+
+
+
+  <script>
+    const button = document.querySelector("button.child");
+    /** @type { HTMLInputElement } */
+    const input = document.querySelector("input.child");
+
+    const write = str =>
+      document.body.insertAdjacentHTML("beforeend", str + "<br>");
+    write("start");
+    write("<hr>");
+
+    // 1️⃣ 메시지 보내기
+    button.addEventListener('click', () => {
+      window.opener.postMessage(input.value, window.location.origin);
+
+    })
+
+
+
+    // 2️⃣ 메시지 받기
+    window.addEventListener(
+      "message",
+      function receiveMessage(event) {
+        if (event.origin !== window.location.origin) {
+          write(`event.origin !== location.origin`);
+          return;
+        }
+        write(event.data);
+      },
+      false
+    );
+  </script>
+</body>
+
+</html>
