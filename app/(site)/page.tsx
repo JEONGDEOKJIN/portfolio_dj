@@ -7,8 +7,8 @@ import { Suspense } from "react";
 import {TestCarousel_2} from "./_components/TestCarousel_2";
 import EmblaCarouselTest from "./_components/EmblaCarouselTest";
 import AntdCarousel from "./_components/AntdCarousel";
-import ParentWindow from "./_components/test/_2_컴포넌트로만들기/ParentWindow";
-import IframePostMessage from "./_components/test/_3_창안띄우고_iframe으로테스트/IframePostMessage";
+// import ParentWindow from "./_components/test/_2_컴포넌트로만들기/ParentWindow";
+// import IframePostMessage from "./_components/test/_3_창안띄우고_iframe으로테스트/IframePostMessage";
 
 export default async function Home() {
   // await sleep(2000); // 5초 동안 기다렸다가 실행해라
@@ -18,8 +18,7 @@ export default async function Home() {
       {/* <main className="tablet:h-[560px] tablet:max-w-[560px] flex flex-col justify-evenly items-center "> */}
       <main className="w-full h-full flex flex-col justify-evenly items-center gap-[72px] pt-[80px] ">
 
-        <section>
-
+        {/* <section> */}
           {/* shadcn 에서는 가능🟠 다만, 기존의 공통 컴포넌트 디자인 시스템을 훼손시키는 문제 */}
           {/* <TestCarousel_2 /> */}
           
@@ -32,9 +31,9 @@ export default async function Home() {
           {/* 성공🔵 */}
           {/* <ParentWindow /> */}
 
-          <IframePostMessage />
+          {/* <IframePostMessage /> */}
 
-        </section>
+        {/* </section> */}
 
         <section className="tablet:h-[560px] tablet:max-w-[560px]   flex flex-col justify-evenly items-center gap-[28px]">
           <div className=" animate-bgColor-cycle rounded-full px-[15px] py-[8px] text-[14px] font-[600]">
