@@ -118,7 +118,12 @@
 }
 
 .leftMoveGlobalCSS {
-  left : -170px;
+  left : 30px;
+  width : 350px
+}
+
+.leftMoveGlobalCSS_STO {
+  left : -166px;
   width : 350px
 }
 

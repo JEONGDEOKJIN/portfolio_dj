@@ -16,7 +16,7 @@ const InformationRight = () => {
   return (
     <>
     <div className="w-[500px] relative">
-      <div className="absolute leftMoveGlobalCSS  shadow  h-fit shrink-0 rounded-[24px] bg-white p-10 flex gap-5 flex-col">
+      <div className="absolute leftMoveGlobalCSS_STO  shadow  h-fit shrink-0 rounded-[24px] bg-white p-10 flex gap-5 flex-col">
         <h5 className="text-[20px] font-normal"> Information </h5>
 
         <div className="flex justify-between">

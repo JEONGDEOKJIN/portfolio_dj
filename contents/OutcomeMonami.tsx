@@ -13,7 +13,7 @@ const OutcomeMonami = () => {
         </h5>
 
         <p className="outcomeMargin">
-          KGA 블록체인 9기 최우수 Node.js 프로젝트 선정 (과정 내 및 과정 외 투표 기준)
+          KGA 블록체인 9기 최우수 Javascript 프로젝트 선정 (과정 내 및 과정 외 투표 기준)
         </p>
 
 
