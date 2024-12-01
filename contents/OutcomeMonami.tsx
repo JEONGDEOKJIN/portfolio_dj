@@ -5,7 +5,7 @@ const OutcomeMonami = () => {
 
   return (
     <>
-      <div className="relative mt-[16px] w-[800px] h-[500px] bg-blue-500  ">
+      <div className="relative mt-[16px] w-[800px] h-[500px]   ">
         <h5 className="text-[20px] leading-[1.6em]  ">
           <strong>
             성과
